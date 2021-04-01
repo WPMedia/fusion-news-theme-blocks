@@ -1,7 +1,7 @@
 import React from 'react';
-import { shallow, mount } from 'enzyme';
+import { mount } from 'enzyme';
 
-jest.mock('fusion:themes', () => jest.fn(() => ({})));
+jest.mock('fusion:themes', () => (jest.fn(() => ({}))));
 
 describe('the links bar feature for the default output type', () => {
   afterEach(() => {
@@ -18,111 +18,57 @@ describe('the links bar feature for the default output type', () => {
   });
 
   it('should be a nav element', () => {
-    const { default: LinksBar } = require('./default');
-    jest.mock('fusion:content', () => ({
-      useContent: jest.fn(() => ({
-        children: [
-          {
-            _id: 'id_1',
-            name: 'test link 1',
-          },
-          {
-            _id: 'id_2',
-            name: 'test link 2',
-          },
-        ],
-      })),
-    }));
-    const wrapper = shallow(
-      <LinksBar customFields={{ navigationConfig: 'links' }} />,
-    );
+    const { default: LinkBar } = require('./link-bar');
+    const fusionContext = { arcSite: 'abc' };
+    const content = {
+      children: [
+        {
+          _id: 123,
+          node_type: 'link',
+          url: 'http://google.com',
+          display_name: 'Text',
+        },
+        {
+          _id: 123,
+          node_type: 'link',
+          url: 'http://google.com',
+          display_name: 'Text 2',
+        },
+      ],
+    };
+    const wrapper = mount(<LinkBar useContent={content} useFusionContext={fusionContext} />);
 
     expect(wrapper.children().at(0).type()).toBe('nav');
   });
 
-  it('should not have separator when only one link', () => {
-    const { default: LinksBar } = require('./default');
-    jest.mock('fusion:content', () => ({
-      useContent: jest.fn(() => ({
-        children: [
-          {
-            _id: 'id_1',
-            name: 'test link 1',
-          },
-        ],
-      })),
-    }));
-    const wrapper = shallow(
-      <LinksBar customFields={{ navigationConfig: 'links' }} />,
-    );
-
-    expect(wrapper.html()).toMatchInlineSnapshot(
-      '"<nav class=\\"links-bar\\"><span class=\\"sc-bdVaJa epgcrJ links-menu\\"><a href=\\"id_1/\\">test link 1</a></span></nav><hr/>"',
-    );
-  });
-
-  it('should have separator when more than one link', () => {
-    const { default: LinksBar } = require('./default');
-    jest.mock('fusion:content', () => ({
-      useContent: jest.fn(() => ({
-        children: [
-          {
-            _id: 'id_1',
-            name: 'test link 1',
-          },
-          {
-            _id: 'id_2',
-            name: 'test link 2',
-          },
-          {
-            _id: 'id_3',
-            node_type: 'link',
-            url: '/',
-            display_name: 'Link Text',
-          },
-        ],
-      })),
-    }));
-    const wrapper = shallow(
-      <LinksBar customFields={{ navigationConfig: 'links' }} />,
-    );
-
-    expect(wrapper.html()).toMatchInlineSnapshot(
-      '"<nav class=\\"links-bar\\"><span class=\\"sc-bdVaJa epgcrJ links-menu\\"><a href=\\"id_1/\\">test link 1</a>  •  </span><span class=\\"sc-bdVaJa epgcrJ links-menu\\"><a href=\\"id_2/\\">test link 2</a>  •  </span><span class=\\"sc-bdVaJa epgcrJ links-menu\\"><a href=\\"/\\">Link Text</a></span></nav><hr/>"',
-    );
-  });
-
   it('should contain the equal number of links between input and output', () => {
-    const { default: LinksBar } = require('./default');
-    jest.mock('fusion:content', () => ({
-      useContent: jest.fn(() => ({
-        children: [
-          {
-            _id: 'id_1',
-            name: 'test link 1',
-          },
-          {
-            _id: 'id_2',
-            name: 'test link 2',
-          },
-          {
-            _id: 'id_3',
-            node_type: 'link',
-            url: '/',
-            display_name: 'Link Text',
-          },
-          {
-            _id: 'id_4',
-            node_type: 'link',
-            url: 'http://arcpublishing.com',
-            display_name: 'Link Text',
-          },
-        ],
-      })),
-    }));
-    const wrapper = mount(
-      <LinksBar customFields={{ navigationConfig: 'links' }} />,
-    );
+    const { default: LinkBar } = require('./link-bar');
+    const fusionContext = { arcSite: 'abc' };
+    const content = {
+      children: [
+        {
+          _id: 'id_1',
+          name: 'test link 1',
+        },
+        {
+          _id: 'id_2',
+          name: 'test link 2',
+        },
+        {
+          _id: 'id_3',
+          node_type: 'link',
+          url: '/',
+          display_name: 'Link Text',
+        },
+        {
+          _id: 'id_4',
+          node_type: 'link',
+          url: 'http://arcpublishing.com',
+          display_name: 'Link Text',
+        },
+      ],
+    };
+    const wrapper = mount(<LinkBar useContent={content} useFusionContext={fusionContext} />);
 
     expect(wrapper.find('span.links-menu')).toHaveLength(4);
     expect(wrapper.find('span.links-menu a:not([target])')).toHaveLength(3);
@@ -130,15 +76,10 @@ describe('the links bar feature for the default output type', () => {
   });
 
   it('should have no menu item if no content is returned', () => {
-    jest.mock('fusion:content', () => ({
-      useContent: jest.fn(() => ({
-        children: [],
-      })),
-    }));
-    const { default: LinksBar } = require('./default');
-    const wrapper = shallow(
-      <LinksBar customFields={{ navigationConfig: 'links' }} />,
-    );
+    const { default: LinkBar } = require('./link-bar');
+    const fusionContext = { arcSite: 'abc' };
+    const content = {};
+    const wrapper = mount(<LinkBar useContent={content} useFusionContext={fusionContext} />);
 
     expect(wrapper.find('nav > span')).toHaveLength(0);
   });
@@ -186,32 +127,20 @@ describe('the links bar feature for the default output type', () => {
   describe('when a link has query parameters', () => {
     it('should not add a slash at the end of a external link', () => {
       const { default: Link } = require('./_children/link');
-      const wrapper = mount(
-        <Link href="http://example.com/testurl/?query=home" name="test" />,
-      );
+      const wrapper = mount(<Link href="http://example.com/testurl/?query=home" name="test" />);
 
-      expect(wrapper.props().href).toBe(
-        'http://example.com/testurl/?query=home',
-      );
-      expect(
-        wrapper.find('[href="http://example.com/testurl/?query=home"]').length,
-      ).toBe(2);
+      expect(wrapper.props().href).toBe('http://example.com/testurl/?query=home');
+      expect(wrapper.find('[href="http://example.com/testurl/?query=home"]').length).toBe(2);
     });
   });
 
   describe('when a link is to a page', () => {
     it('should not add a slash at the end of the link', () => {
       const { default: Link } = require('./_children/link');
-      const wrapper = mount(
-        <Link href="https://example.com/category/page.html" name="test" />,
-      );
+      const wrapper = mount(<Link href="https://example.com/category/page.html" name="test" />);
 
-      expect(wrapper.props().href).toBe(
-        'https://example.com/category/page.html',
-      );
-      expect(
-        wrapper.find('[href="https://example.com/category/page.html"]').length,
-      ).toBe(2);
+      expect(wrapper.props().href).toBe('https://example.com/category/page.html');
+      expect(wrapper.find('[href="https://example.com/category/page.html"]').length).toBe(2);
     });
   });
 
@@ -228,14 +157,10 @@ describe('the links bar feature for the default output type', () => {
   describe('when a link has a mail', () => {
     it('should not add a slash at the end of the link', () => {
       const { default: Link } = require('./_children/link');
-      const wrapper = mount(
-        <Link href="mailto:readers@washpost.com" name="test" />,
-      );
+      const wrapper = mount(<Link href="mailto:readers@washpost.com" name="test" />);
 
       expect(wrapper.props().href).toBe('mailto:readers@washpost.com');
-      expect(wrapper.find('[href="mailto:readers@washpost.com"]').length).toBe(
-        2,
-      );
+      expect(wrapper.find('[href="mailto:readers@washpost.com"]').length).toBe(2);
     });
   });
 });
