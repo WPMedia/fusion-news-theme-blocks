@@ -108,6 +108,7 @@
     "@wpmedia/large-manual-promo-block": "file:blocks/large-manual-promo-block",
     "@wpmedia/large-promo-block": "file:blocks/large-promo-block",
     "@wpmedia/lead-art-block": "file:blocks/lead-art-block",
+    "@wpmedia/line-chart-block": "file:blocks/line-chart-block",
     "@wpmedia/links-bar-block": "file:blocks/links-bar-block",
     "@wpmedia/masthead-block": "file:blocks/masthead-block",
     "@wpmedia/medium-manual-promo-block": "file:blocks/medium-manual-promo-block",
@@ -146,7 +147,8 @@
     "@wpmedia/unpublished-content-source-block": "file:blocks/unpublished-content-source-block",
     "@wpmedia/video-player-block": "file:blocks/video-player-block",
     "@wpmedia/video-promo-block": "file:blocks/video-promo-block",
-    "focus-trap-react": "^8.4.2"
+    "focus-trap-react": "^8.4.2",
+    "victory": "^35.5.1"
   },
   "browserslist": [
     "defaults",

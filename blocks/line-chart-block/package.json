@@ -1,0 +1,33 @@
+{
+  "name": "@wpmedia/line-chart-block",
+  "version": "1.0.0",
+  "description": "Fusion themes line chart block.",
+  "author": "Nick Schuabch <schubachn@washpost.com>",
+  "homepage": "https://github.com/WPMedia/fusion-news-theme-blocks#readme",
+  "license": "CC-BY-NC-ND-4.0",
+  "main": "index.js",
+  "files": [
+    "features"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/WPMedia/fusion-news-theme-blocks.git",
+    "directory": "blocks/line-chart-block"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "lint": "eslint --ext js --ext jsx features"
+  },
+  "peerDependencies": {
+    "@wpmedia/engine-theme-sdk": "canary",
+    "@wpmedia/news-theme-css": "stable",
+    "styled-components": "^4.4.0"
+  },
+  "dependencies": {
+    "victory": "^35.5.1"
+  }
+}
