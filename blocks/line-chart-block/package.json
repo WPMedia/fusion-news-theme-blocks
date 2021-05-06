@@ -2,7 +2,7 @@
   "name": "@wpmedia/line-chart-block",
   "version": "1.0.0",
   "description": "Fusion themes line chart block.",
-  "author": "Nick Schuabch <schubachn@washpost.com>",
+  "author": "Nick Schubach <schubachn@washpost.com>",
   "homepage": "https://github.com/WPMedia/fusion-news-theme-blocks#readme",
   "license": "CC-BY-NC-ND-4.0",
   "main": "index.js",
