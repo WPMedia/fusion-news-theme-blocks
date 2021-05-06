@@ -2,24 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { VictoryChart, VictoryLine, VictoryVoronoiContainer } from 'victory';
 
-import { useFusionContext } from 'fusion:context';
+// import { useFusionContext } from 'fusion:context';
 
 const LineChart = () => {
-  const { globalContent } = useFusionContext();
+  // const { globalContent } = useFusionContext();
 
-  console.log(globalContent);
+  const yFunction = (datum) => Math.sin(2 * Math.PI * datum.x);
+  const toolTipLabel = ({ datum }) => `${datum.x}, ${datum.y}`;
 
   return (
-    <VictoryChart domainPadding={{ y: 10 }}
-      containerComponent={
-        <VictoryVoronoiContainer
-          labels={({ datum }) => `${round(datum.x, 2)}, ${round(datum.y, 2)}`}
-        />
-      }
+    <VictoryChart
+      domainPadding={{ y: 10 }}
+      containerComponent={(
+        <VictoryVoronoiContainer labels={toolTipLabel} />
+      )}
     >
-      <VictoryLine
-        y={(datum) => Math.sin(2 * Math.PI * datum.x)}
-      />
+      <VictoryLine y={yFunction} />
     </VictoryChart>
   );
 };
