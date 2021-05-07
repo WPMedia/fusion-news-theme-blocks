@@ -7,7 +7,7 @@ import { VictoryChart, VictoryLine, VictoryVoronoiContainer } from 'victory';
 const LineChart = () => {
   // const { globalContent } = useFusionContext();
 
-  const yFunction = (datum) => Math.sin(2 * Math.PI * datum.x);
+  const yFunction = (datum) => Math.sin(datum.x);
   const toolTipLabel = ({ datum }) => `${datum.x}, ${datum.y}`;
 
   return (
