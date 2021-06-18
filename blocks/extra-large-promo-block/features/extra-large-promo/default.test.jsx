@@ -15,6 +15,7 @@ jest.mock('@wpmedia/engine-theme-sdk', () => ({
   LazyLoad: ({ children }) => <>{ children }</>,
   isServerSide: () => true,
   formatURL: jest.fn((input) => input.toString()),
+  Overline: () => <div />,
 }));
 jest.mock('fusion:themes', () => (jest.fn(() => ({}))));
 jest.mock('fusion:properties', () => (jest.fn(() => ({
@@ -103,7 +104,7 @@ describe('the extra large promo feature', () => {
       showOverline: false,
     };
     const wrapper = mount(<ExtraLargePromo customFields={specialConfig} />);
-    expect(wrapper.find('Overline')).toHaveLength(0);
+    expect(wrapper.find('Overline').exists()).toBe(false);
   });
 
   it('should have no PromoHeadline when showHeadline is false', () => {
@@ -224,9 +225,7 @@ describe('the extra large promo feature', () => {
     const wrapper = mount(<ExtraLargePromo customFields={myConfig} />);
 
     const wrapperOverline = wrapper.find('Overline');
-    expect(wrapperOverline.length).toBe(1);
-
-    expect(wrapperOverline.find('a.overline').text()).toEqual('the-sun-name');
+    expect(wrapperOverline.exists()).toBe(true);
     wrapper.unmount();
   });
 
@@ -245,7 +244,7 @@ describe('the extra large promo feature', () => {
 
     const wrapper = mount(<ExtraLargePromo customFields={myConfig} />);
 
-    expect(wrapper.find('Overline').length).toBe(1);
+    expect(wrapper.find('Overline').exists()).toBe(true);
     expect(wrapper.find('.xl-promo-headline').length).toBe(5);
     expect(wrapper.find('.description-text').length).toBe(5);
     expect(wrapper.find('Byline').length).toBe(1);

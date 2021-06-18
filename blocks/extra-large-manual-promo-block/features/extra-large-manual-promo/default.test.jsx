@@ -7,6 +7,7 @@ jest.mock('@wpmedia/engine-theme-sdk', () => ({
   LazyLoad: ({ children }) => <>{ children }</>,
   isServerSide: () => true,
   formatURL: jest.fn((input) => input.toString()),
+  Overline: () => <div />,
 }));
 jest.mock('fusion:themes', () => (jest.fn(() => ({}))));
 jest.mock('fusion:properties', () => (jest.fn(() => ({}))));
@@ -65,9 +66,9 @@ describe('the extra large promo feature', () => {
     expect(wrapper.find('.container-fluid')).toHaveLength(1);
   });
 
-  it('should have three link elements by default', () => {
+  it('should have two link elements by default', () => {
     const wrapper = mount(<ExtraLargeManualPromo customFields={config} />);
-    expect(wrapper.find('a')).toHaveLength(3);
+    expect(wrapper.find('a')).toHaveLength(2);
   });
 
   it('should have one img when show image is true with 4:3 default ratio', () => {

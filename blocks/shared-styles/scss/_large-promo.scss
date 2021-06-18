@@ -10,18 +10,6 @@
     vertical-align: middle;
   }
 
-  .overline {
-    display: inline-block;
-    font-size: calculateRem(16px);
-    line-height: calculateRem(24px);
-    padding-bottom: map-get($spacers, 'sm');
-
-    @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
-      font-size: calculateRem(16px);
-      line-height: calculateRem(22px);
-    }
-  }
-
   .lg-promo-headline {
     @include link-color-active-hover($ui-primary-font-color);
     font-size: calculateRem(22px);

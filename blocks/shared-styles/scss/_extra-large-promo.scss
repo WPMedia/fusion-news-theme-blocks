@@ -12,9 +12,6 @@
 
   .overline {
     display: block;
-    font-size: calculateRem(16px);
-    line-height: calculateRem(22px);
-    padding-bottom: map-get($spacers, 'sm');
     text-align: center;
     width: 100%;
   }

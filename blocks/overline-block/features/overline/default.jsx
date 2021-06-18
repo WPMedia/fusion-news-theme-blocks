@@ -1,8 +1,12 @@
 import React from 'react';
-
+import styled from 'styled-components';
 import { Overline as OverlineOutput } from '@wpmedia/shared-styles';
 
-const Overline = () => <OverlineOutput />;
+const BlockOverline = styled(OverlineOutput)`
+  font-size: 1.25rem;
+`;
+
+const Overline = () => <BlockOverline />;
 
 Overline.label = 'Overline – Arc Block';
 

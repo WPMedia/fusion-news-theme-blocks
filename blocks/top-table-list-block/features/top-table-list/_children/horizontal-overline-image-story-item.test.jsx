@@ -85,6 +85,7 @@ describe('horizontal overline image story item', () => {
       extractVideoEmbedFromStory: jest.fn(() => '<div class="video-embed"></div>'),
       VideoPlayer: ({ embedHTML, id }) => <div dangerouslySetInnerHTML={{ __html: embedHTML }} id={`video-${id}`} />,
       formatURL: jest.fn((input) => input.toString()),
+      Overline: () => <div />,
     }));
   });
 
@@ -97,8 +98,7 @@ describe('horizontal overline image story item', () => {
     const wrapper = mount(<HorizontalOverlineImageStoryItem {...sampleProps} />);
 
     // finds overline
-    expect(wrapper.find('a.overline').length).toBe(1);
-    expect(wrapper.find('a.overline').text()).toBe('News');
+    expect(wrapper.find('.overline').exists()).toBe(true);
 
     // has the correct link
     expect(wrapper.find('a.lg-promo-headline').length).toBe(1);
@@ -191,9 +191,6 @@ describe('horizontal overline image story item', () => {
     const placeholderImage = wrapper.find('img');
     expect(placeholderImage.length).toBe(1);
 
-    // does not find overline
-    expect(wrapper.find('a.overline').length).toBe(0);
-
     expect(wrapper.find('HorizontalOverlineImageStoryItem > hr').length).toBe(1);
   });
 
@@ -219,7 +216,7 @@ describe('horizontal overline image story item', () => {
     const wrapper = mount(<HorizontalOverlineImageStoryItem {...testProps} />);
 
     expect(wrapper.find('.top-table-extra-large-image-placeholder').length).toBe(0);
-    expect(wrapper.find('Overline').length).toBe(1);
+    expect(wrapper.find('Overline').exists()).toBe(true);
     expect(wrapper.find('a.lg-promo-headline').length).toBe(1);
     expect(wrapper.find('a.lg-promo-headline').prop('href')).toBe(websiteURL);
     expect(wrapper.find('hr').length).toBe(1);
@@ -246,7 +243,7 @@ describe('horizontal overline image story item', () => {
     const wrapper = mount(<HorizontalOverlineImageStoryItem {...testProps} />);
 
     expect(wrapper.find('.top-table-extra-large-image-placeholder').length).toBe(0);
-    expect(wrapper.find('Overline').length).toBe(0);
+    expect(wrapper.find('Overline').exists()).toBe(false);
     expect(wrapper.find('a.lg-promo-headline').length).toBe(1);
     expect(wrapper.find('a.lg-promo-headline').prop('href')).toBe(websiteURL);
     expect(wrapper.find('hr').length).toBe(1);
@@ -275,7 +272,7 @@ describe('horizontal overline image story item', () => {
     const wrapper = mount(<HorizontalOverlineImageStoryItem {...testProps} />);
 
     expect(wrapper.find('.top-table-extra-large-image-placeholder').length).toBe(0);
-    expect(wrapper.find('Overline').length).toBe(0);
+    expect(wrapper.find('Overline').exists()).toBe(false);
     expect(wrapper.find('a.lg-promo-headline').length).toBe(1);
     expect(wrapper.find('a.lg-promo-headline').prop('href')).toBe(websiteURL);
     expect(wrapper.find('hr').hasClass('hr-borderless')).toBe(true);
@@ -303,7 +300,7 @@ describe('horizontal overline image story item', () => {
     const wrapper = mount(<HorizontalOverlineImageStoryItem {...testProps} />);
 
     expect(wrapper.find('.top-table-extra-large-image-placeholder').length).toBe(0);
-    expect(wrapper.find('Overline').length).toBe(0);
+    expect(wrapper.find('Overline').exists()).toBe(false);
     expect(wrapper.find('a.lg-promo-headline').length).toBe(1);
     expect(wrapper.find('a.lg-promo-headline').prop('href')).toBe(websiteURL);
     expect(wrapper.find('hr').length).toBe(1);

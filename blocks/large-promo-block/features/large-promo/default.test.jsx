@@ -15,6 +15,7 @@ jest.mock('@wpmedia/engine-theme-sdk', () => ({
   LazyLoad: ({ children }) => <>{ children }</>,
   isServerSide: () => true,
   formatURL: jest.fn((input) => input.toString()),
+  Overline: () => <div />,
 }));
 
 jest.mock('fusion:themes', () => (jest.fn(() => ({}))));
@@ -190,7 +191,7 @@ describe('the large promo feature', () => {
 
     const wrapper = mount(<LargePromo customFields={myConfig} arcSite="dagen" />);
 
-    expect(wrapper.find('Overline').length).toBe(1);
+    expect(wrapper.find('Overline').exists()).toBe(true);
     expect(wrapper.find('.lg-promo-headline').length).toBe(5);
     expect(wrapper.find('.description-text').length).toBe(5);
     expect(wrapper.find('Byline').length).toBe(1);
@@ -297,9 +298,8 @@ describe('the large promo feature', () => {
     const wrapper = mount(<LargePromo customFields={myConfig} />);
 
     const wrapperOverline = wrapper.find('Overline');
-    expect(wrapperOverline.length).toBe(1);
+    expect(wrapperOverline.exists()).toBe(true);
 
-    expect(wrapperOverline.find('a.overline').text()).toEqual('the-sun-name');
     wrapper.unmount();
   });
 

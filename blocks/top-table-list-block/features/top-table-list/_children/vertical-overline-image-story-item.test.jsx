@@ -69,6 +69,7 @@ describe('vertical overline image story item', () => {
       extractVideoEmbedFromStory: jest.fn(() => '<div class="video-embed"></div>'),
       VideoPlayer: ({ embedHTML, id }) => <div dangerouslySetInnerHTML={{ __html: embedHTML }} id={`video-${id}`} />,
       formatURL: jest.fn((input) => input.toString()),
+      Overline: () => <div />,
     }));
     jest.mock('fusion:context', () => ({
       useFusionContext: jest.fn(() => ({
@@ -96,8 +97,7 @@ describe('vertical overline image story item', () => {
     // doesn't show placeholder
     expect(wrapper.find('.top-table-extra-large-image-placeholder').length).toBe(0);
     // finds overline
-    expect(wrapper.find('a.overline').length).toBe(1);
-    expect(wrapper.find('a.overline').text()).toBe(overlineText);
+    expect(wrapper.find('.overline').exists()).toBe(true);
 
     // does not find default spacing for headline descriptions
     expect(wrapper.find('.headline-description-spacing').length).toBe(0);
@@ -246,7 +246,7 @@ describe('vertical overline image story item', () => {
     const wrapper = mount(<VerticalOverlineImageStoryItem {...testProps} />);
 
     expect(wrapper.find('.top-table-extra-large-image-placeholder').length).toBe(0);
-    expect(wrapper.find('Overline').length).toBe(1);
+    expect(wrapper.find('Overline').exists()).toBe(true);
     expect(wrapper.find('a.xl-promo-headline').length).toBe(1);
     expect(wrapper.find('a.xl-promo-headline').prop('href')).toBe(websiteURL);
     expect(wrapper.find('hr').length).toBe(1);

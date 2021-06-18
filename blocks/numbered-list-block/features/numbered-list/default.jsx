@@ -4,10 +4,11 @@ import Consumer from 'fusion:consumer';
 import React, { Component } from 'react';
 import getProperties from 'fusion:properties';
 
-import { Image, LazyLoad, isServerSide } from '@wpmedia/engine-theme-sdk';
+import {
+  Image, LazyLoad, isServerSide, ThemeStyle,
+} from '@wpmedia/engine-theme-sdk';
 import './numbered-list.scss';
 import { extractResizedParams } from '@wpmedia/resizer-image-block';
-import { PrimaryFont, SecondaryFont } from '@wpmedia/shared-styles';
 
 function extractImage(promo) {
   return promo && promo.basic && promo.basic.type === 'image' && promo.basic.url;
@@ -120,9 +121,9 @@ class NumberedList extends Component {
     const ListResults = () => (
       <div className="numbered-list-container layout-section">
         {(title !== '' && contentElements && contentElements.length) ? (
-          <PrimaryFont as="h2" className="list-title">
+          <ThemeStyle as="h2" className="list-title">
             {title}
-          </PrimaryFont>
+          </ThemeStyle>
         ) : null }
         {(contentElements && contentElements.length) ? contentElements.map((element, i) => {
           const {
@@ -142,8 +143,8 @@ class NumberedList extends Component {
                 {showHeadline
                 && (
                 <a href={url} className="headline-list-anchor">
-                  <SecondaryFont as="p" className="list-item-number">{i + 1}</SecondaryFont>
-                  <PrimaryFont as="h2" className="headline-text">{headlineText}</PrimaryFont>
+                  <ThemeStyle as="p" className="list-item-number">{i + 1}</ThemeStyle>
+                  <ThemeStyle as="h2" className="headline-text">{headlineText}</ThemeStyle>
                 </a>
                 )}
                 {showImage

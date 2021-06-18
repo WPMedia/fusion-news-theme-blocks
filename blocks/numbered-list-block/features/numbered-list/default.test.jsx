@@ -9,20 +9,9 @@ jest.mock('@wpmedia/engine-theme-sdk', () => ({
   Image: () => <img alt="test" />,
   LazyLoad: ({ children }) => <>{ children }</>,
   isServerSide: () => true,
+  ThemeStyle: ({ children }) => <>{ children }</>,
 }));
 const { default: mockData } = require('./mock-data');
-
-jest.mock('fusion:themes', () => (
-  () => ({
-    'primary-font-family': 'fontPrimary',
-    'secondary-font-family': 'fontSecondary',
-  })
-));
-
-jest.mock('@wpmedia/shared-styles', () => ({
-  PrimaryFont: ({ children }) => <div id="primary-font-mock">{ children }</div>,
-  SecondaryFont: ({ children }) => <div id="secondary-font-mock">{ children }</div>,
-}));
 
 describe('The numbered-list-block', () => {
   describe('render a list of numbered-list-items', () => {

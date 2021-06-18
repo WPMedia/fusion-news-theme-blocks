@@ -20,6 +20,7 @@ jest.mock('@wpmedia/engine-theme-sdk', () => ({
   Image: () => <div />,
   LazyLoad: ({ children }) => <>{ children }</>,
   isServerSide: () => true,
+  Overline: () => <div />,
 }));
 
 jest.mock('@wpmedia/date-block', () => ({
