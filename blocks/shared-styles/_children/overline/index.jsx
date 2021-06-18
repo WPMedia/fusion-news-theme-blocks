@@ -1,15 +1,32 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useFusionContext } from 'fusion:context';
 import { useEditableContent } from 'fusion:content';
 import getProperties from 'fusion:properties';
 import getTranslatedPhrases from 'fusion:intl';
 import { formatURL } from '@wpmedia/engine-theme-sdk';
-import PrimaryFont from '../primary-font';
+import styled, { ThemeContext } from 'styled-components';
 
-import './overline.scss';
+import ThemeStyles from '../theme-styles';
+
+// const OverlineElement = styled.span`
+//   display: inline-block;
+//   text-decoration: none;
+
+//   background-color: ${(props) => props.theme.backgroundColor};
+//   color: ${(props) => props.theme.color};
+//   font-size: ${(props) => props.theme.fontSize};
+//   font-weight: ${(props) => props.theme.fontWeight};
+//   padding: ${(props) => props.theme.padding};
+// `;
+
+const StyledOverlineElement = styled(ThemeStyles)`
+  display: inline-block;
+  text-decoration: none;
+`;
 
 const Overline = (props) => {
+  const themeContext = useContext(ThemeContext);
   const { globalContent, arcSite } = useFusionContext();
   const { editableContent } = useEditableContent();
   const phrases = getTranslatedPhrases(getProperties(arcSite).locale || 'en');
@@ -19,6 +36,7 @@ const Overline = (props) => {
     editable,
     story,
     className = '',
+    styles,
   } = props;
 
   const sourceContent = story || globalContent || {};
@@ -63,6 +81,10 @@ const Overline = (props) => {
   const classNames = ['overline'];
   const itemProps = {
     ...edit,
+    theme: {
+      ...themeContext.overline,
+      ...styles,
+    },
     as: 'span',
   };
 
@@ -79,9 +101,9 @@ const Overline = (props) => {
   itemProps.className = classNames.join(' ');
 
   return (url || text) ? (
-    <PrimaryFont {...itemProps}>
+    <StyledOverlineElement {...itemProps}>
       {text}
-    </PrimaryFont>
+    </StyledOverlineElement>
   ) : null;
 };
 

@@ -1,9 +1,17 @@
 /* eslint-disable react/jsx-no-target-blank */
 // Disabled eslint due to it not being able to handle the ternary logic
-import React from 'react';
+import React, { useContext } from 'react';
 import { useEditableContent } from 'fusion:content';
 import { useComponentContext, useFusionContext } from 'fusion:context';
-import { PrimaryFont } from '@wpmedia/shared-styles';
+import styled, { ThemeContext } from 'styled-components';
+
+import ThemeStyles from '../theme-styles';
+
+const StyledPromoHeadline = styled(ThemeStyles)`
+  a {
+    text-decoration: ${(props) => props.theme.textDecoration};
+  }
+`;
 
 const PromoHeadline = (props) => {
   const {
@@ -15,7 +23,9 @@ const PromoHeadline = (props) => {
     headingClassName = '',
     newTab = false,
     editable = true,
+    styles,
   } = props;
+  const themeContext = useContext(ThemeContext);
   const { editableContent } = useEditableContent();
   const { registerSuccessEvent } = useComponentContext();
   const { arcSite } = useFusionContext();
@@ -25,9 +35,15 @@ const PromoHeadline = (props) => {
 
   const editableItem = content?.headlines && editable ? editableContent(content, 'headlines.basic') : {};
 
+  const theme = {
+    ...themeContext.heading,
+    ...styles,
+  };
+
   return linkText ? (
     <div className={`promo-headline ${className}`}>
-      <PrimaryFont
+      <StyledPromoHeadline
+        theme={theme}
         as="h2"
         className={headingClassName}
         {...editableItem}
@@ -42,7 +58,7 @@ const PromoHeadline = (props) => {
         >
           {linkText}
         </a>
-      </PrimaryFont>
+      </StyledPromoHeadline>
     </div>
   ) : null;
 };

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { localizeDateTime } from '@wpmedia/engine-theme-sdk';
 import Consumer from 'fusion:consumer';
 import getProperties from 'fusion:properties';
-import './date.scss';
+// import './date.scss';
 import { PrimaryFont } from '@wpmedia/shared-styles';
 
 @Consumer

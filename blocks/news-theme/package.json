@@ -1,0 +1,33 @@
+{
+  "name": "@wpmedia/news-theme",
+  "version": "5.12.0",
+  "description": "News Theme Context Block",
+  "author": "",
+  "homepage": "https://github.com/WPMedia/fusion-news-theme-blocks#readme",
+  "license": "CC-BY-NC-ND-4.0",
+  "main": "index.js",
+  "files": [
+    "features",
+    "chains",
+    "layouts",
+    "sources"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/WPMedia/fusion-news-theme-blocks.git",
+    "directory": "blocks/news-theme"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "lint": "eslint --ext js --ext jsx features"
+  },
+  "peerDependencies": {
+    "@wpmedia/engine-theme-sdk": "*",
+    "styled-components": "^4.4.0"
+  },
+  "gitHead": "8afcaeae3d9a0cc126a4a22a9b7fe766669aa88e"
+}

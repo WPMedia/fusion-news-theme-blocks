@@ -34,6 +34,7 @@ const PromoImage = ({
   showPromoLabel = false,
   promoLabelSize = 'small',
   lazyLoad = false,
+  className,
 }) => {
   const { arcSite, isAdmin } = useFusionContext();
   const { registerSuccessEvent } = useComponentContext();
@@ -94,7 +95,7 @@ const PromoImage = ({
     );
 
   return (
-    <div className="promo-image">
+    <div className={`promo-image ${className}`}>
       {hasLink() ? withLink(ImageOrPlaceholder) : ImageOrPlaceholder}
       {showPromoLabel && promoType ? <PromoLabel type={promoType} size={promoLabelSize} /> : null}
     </div>

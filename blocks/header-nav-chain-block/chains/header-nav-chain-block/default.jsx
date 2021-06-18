@@ -23,7 +23,7 @@ import NavLogo from './_children/nav-logo';
 import NavWidget from './_children/nav-widget';
 // shares styles with header nav block
 // can modify styles in shared styles block
-import '@wpmedia/shared-styles/scss/_header-nav.scss';
+// import '@wpmedia/shared-styles/scss/_header-nav.scss';
 import HorizontalLinksBar from './_children/horizontal-links/default';
 
 /* Global Constants */

@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 import { useEditableContent, useContent } from 'fusion:content';
 import { useFusionContext } from 'fusion:context';
+import styled, { ThemeContext } from 'styled-components';
 
 import {
   extractVideoEmbedFromStory,
@@ -13,12 +14,13 @@ import {
 } from '@wpmedia/engine-theme-sdk';
 import { imageRatioCustomField } from '@wpmedia/resizer-image-block';
 import {
-  Byline, Overline, PromoDate, PromoDescription, PromoHeadline, PromoImage,
+  Byline, Overline, PromoDate, PromoDescription, PromoHeadline, PromoImage, ThemeStyles,
 } from '@wpmedia/shared-styles';
 
-import '@wpmedia/shared-styles/scss/_large-promo.scss';
+const StyledLargePromo = styled(ThemeStyles)``;
 
 const LargePromoItem = ({ customFields }) => {
+  const themeContext = useContext(ThemeContext);
   const { arcSite, id, isAdmin } = useFusionContext();
   const { searchableField } = useEditableContent();
 
@@ -115,9 +117,14 @@ const LargePromoItem = ({ customFields }) => {
   const textClass = customFields?.showImage ? 'col-sm-12 col-md-xl-6 flex-col' : 'col-sm-xl-12 flex-col';
   const videoEmbed = customFields?.playVideoInPlace && extractVideoEmbedFromStory(content);
 
+  const themeValues = {
+    ...themeContext?.largePromo,
+    ...customFields?.themeSettings ? JSON.parse(customFields?.themeSettings) : {},
+  };
+
   return (
     <>
-      <article className="container-fluid large-promo">
+      <StyledLargePromo as="article" theme={themeValues} className="container-fluid large-promo">
         <div className="row">
           {(!!videoEmbed
             || customFields?.showImage)
@@ -160,10 +167,10 @@ const LargePromoItem = ({ customFields }) => {
           && (
             <div className={textClass}>
               {customFields?.showOverline
-                ? <Overline story={content} editable />
+                ? <Overline styles={themeValues.overline} story={content} editable />
                 : null}
               {customFields?.showHeadline
-                ? <PromoHeadline content={content} headingClassName="lg-promo-headline" linkClassName="lg-promo-headline" />
+                ? <PromoHeadline styles={themeContext?.largePromo?.heading} content={content} headingClassName="lg-promo-headline" linkClassName="lg-promo-headline" />
                 : null}
               {customFields?.showDescription
                 ? <PromoDescription className="description-text" content={content} />
@@ -179,7 +186,7 @@ const LargePromoItem = ({ customFields }) => {
             </div>
           )}
         </div>
-      </article>
+      </StyledLargePromo>
       <hr />
     </>
   );
@@ -250,6 +257,9 @@ LargePromo.propTypes = {
       description: 'Turning on lazy-loading will prevent this block from being loaded on the page until it is nearly in-view for the user.',
     }),
     ...(videoPlayerCustomFields()),
+    themeSettings: PropTypes.json.tag({
+      label: 'Theme overrides',
+    }),
   }),
 
 };

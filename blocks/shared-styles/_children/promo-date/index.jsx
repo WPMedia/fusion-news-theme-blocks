@@ -4,7 +4,7 @@ import getProperties from 'fusion:properties';
 import { localizeDateTime } from '@wpmedia/engine-theme-sdk';
 import PrimaryFont from '../primary-font';
 
-import './index.scss';
+// import './index.scss';
 
 const PromoDate = (props) => {
   const {

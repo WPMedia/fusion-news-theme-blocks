@@ -1,0 +1,47 @@
+$primary-color: #1b6fa6 !default;
+$secondary-color: $primary-color !default;
+$success-color: #00a321 !default;
+$warning-color: #e07000 !default;
+$danger-color: #db0a07 !default;
+$ui-light-gray: #dadada !default;
+$ui-medium-gray: #575757 !default;
+$ui-dark-gray: #191919 !default;
+$border-rule-color: $ui-light-gray !default;
+$image-caption-rule-color: #9a9a9a !default;
+$ui-primary-font-color: #191919 !default;
+$ui-primary-header-color: $ui-dark-gray !default;
+$link-color: $primary-color !default;
+$ui-dark-secondary-color: $ui-dark-gray;
+
+$grid-breakpoints: (
+        sm: 0rem,
+        md: 48rem,
+        lg: 64rem,
+        xl: 90rem
+) !default;
+
+$spacers: (
+        xxs: 0.25rem,
+        xs: 0.5rem,
+        sm: 1rem,
+        md: 1.5rem,
+        lg: 2rem,
+        xl: 3rem,
+        xxl: 4rem
+) !default;
+
+
+$default-font-size: 16px;
+
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+@function calculateRem($size) {
+  $size: strip-unit($size);
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}

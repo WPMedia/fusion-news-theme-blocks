@@ -8,7 +8,7 @@ import {
   Overline, PromoDescription, PromoHeadline, PromoImage,
 } from '@wpmedia/shared-styles';
 
-import '@wpmedia/shared-styles/scss/_large-promo.scss';
+// import '@wpmedia/shared-styles/scss/_large-promo.scss';
 
 const LargeManualPromoItem = ({ customFields }) => {
   const { isAdmin } = useFusionContext();

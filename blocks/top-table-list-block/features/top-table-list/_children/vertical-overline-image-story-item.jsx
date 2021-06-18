@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import styled, { ThemeContext } from 'styled-components';
 import {
   extractVideoEmbedFromStory,
   // presentational component does not do data fetching
@@ -6,8 +7,18 @@ import {
   videoPlayerCustomFieldTags,
 } from '@wpmedia/engine-theme-sdk';
 import {
-  Byline, Overline, PromoDate, PromoDescription, PromoHeadline, PromoImage,
+  Byline, Overline, PromoDate, PromoDescription, PromoHeadline, PromoImage, ThemeStyles,
 } from '@wpmedia/shared-styles';
+
+
+const StyledExtraLargePromo = styled(ThemeStyles)`
+  display: inline-block;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+`;
 
 const VerticalOverlineImageStoryItem = (props) => {
   const {
@@ -15,6 +26,7 @@ const VerticalOverlineImageStoryItem = (props) => {
     id,
     customFields = {},
   } = props;
+  const themeContext = useContext(ThemeContext);
 
   const showBottomBorder = (typeof customFields?.showBottomBorderXL === 'undefined') || customFields?.showBottomBorderXL;
 
@@ -24,7 +36,7 @@ const VerticalOverlineImageStoryItem = (props) => {
 
   return (
     <>
-      <article className="container-fluid xl-large-promo" key={id}>
+      <StyledExtraLargePromo as="article" className="container-fluid xl-large-promo" key={id}>
         <div className="promo-item-margins row xl-promo-padding-bottom">
           {(customFields?.showHeadlineXL
             || !!videoEmbed
@@ -40,6 +52,7 @@ const VerticalOverlineImageStoryItem = (props) => {
               {customFields?.showHeadlineXL
                 ? (
                   <PromoHeadline
+                    styles={themeContext?.extraLargePromo?.heading}
                     content={element}
                     headingClassName="xl-promo-headline"
                     linkClassName="xl-promo-headline"
@@ -89,7 +102,7 @@ const VerticalOverlineImageStoryItem = (props) => {
             </div>
           )}
         </div>
-      </article>
+      </StyledExtraLargePromo>
       <hr className={!showBottomBorder ? 'hr-borderless' : ''} />
     </>
   );

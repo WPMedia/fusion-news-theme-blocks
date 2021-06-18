@@ -5,9 +5,26 @@ import React from 'react';
 import ArticleDate from '@wpmedia/date-block';
 import { Image, LazyLoad, isServerSide } from '@wpmedia/engine-theme-sdk';
 import { extractResizedParams } from '@wpmedia/resizer-image-block';
-import { Byline, Overline, PrimaryFont } from '@wpmedia/shared-styles';
+import {
+  Byline, Overline, ThemeStyles,
+} from '@wpmedia/shared-styles';
 import getProperties from 'fusion:properties';
-import './card-list.scss';
+import styled, { withTheme } from 'styled-components';
+
+// import './card-list.scss';
+
+const StyledCardList = styled(ThemeStyles)`
+
+  .list-item-simple img {
+    width: 100%;
+  }
+
+  a {
+    text-decoration: none;
+  }
+`;
+
+const CardListArticleHeading = styled(ThemeStyles)``;
 
 function getResizedImage(promo) {
   if (promo?.basic?.type === 'image' && promo?.basic?.resized_params) {
@@ -181,7 +198,7 @@ class CardList extends React.Component {
       return null;
     }
 
-    const { customFields: { title } = {}, arcSite } = this.props;
+    const { customFields: { title } = {}, arcSite, theme } = this.props;
     const {
       cardList: { content_elements: pageContent = [] } = {},
       placeholderResizedImageOptions,
@@ -205,17 +222,17 @@ class CardList extends React.Component {
     const CardListItems = () => (
       (contentElements.length > 0
         && (
-          <div className="card-list-container">
+          <StyledCardList as="div" className="card-list-container" theme={theme?.cardList}>
             <div className="simple-results-list-container">
               {
                 title
                   ? (
-                    <PrimaryFont
+                    <ThemeStyles
                       as="div"
                       className="card-list-title"
                     >
                       {title}
-                    </PrimaryFont>
+                    </ThemeStyles>
                   )
                   : ''
               }
@@ -251,18 +268,17 @@ class CardList extends React.Component {
                   && (<Overline story={contentElements[0]} className="card-list-overline" />
                   )}
                 <div>
-                  <PrimaryFont
-                    as="h2"
-                    className="card-list-headline"
-                  >
-                    <a
+                  <h2 className="card-list-headline">
+                    <CardListArticleHeading
+                      as="a"
                       href={contentElements[0].websites[arcSite].website_url}
+                      theme={theme?.cardList?.heading}
                       className="list-anchor vertical-align-image"
                       id="card-list--headline-link"
                     >
                       {contentElements[0].headlines.basic}
-                    </a>
-                  </PrimaryFont>
+                    </CardListArticleHeading>
+                  </h2>
                   <div className="author-date">
                     <Byline content={contentElements[0]} list separator={showSeparator} font="Primary" />
                     <ArticleDate
@@ -290,12 +306,13 @@ class CardList extends React.Component {
                           href={url}
                           className="headline-list-anchor vertical-align-image"
                         >
-                          <PrimaryFont
+                          <CardListArticleHeading
                             as="h2"
                             className="headline-text"
+                            theme={theme?.cardList?.small?.heading}
                           >
                             {headlineText}
-                          </PrimaryFont>
+                          </CardListArticleHeading>
                         </a>
                         <a
                           href={url}
@@ -329,7 +346,7 @@ class CardList extends React.Component {
                 })
               }
             </div>
-          </div>
+          </StyledCardList>
         )
       )
     );
@@ -361,4 +378,5 @@ CardList.propTypes = {
   }),
 };
 
-export default CardList;
+// export default CardList;
+export default withTheme(CardList);

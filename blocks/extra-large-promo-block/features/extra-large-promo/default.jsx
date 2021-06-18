@@ -4,7 +4,7 @@ import { useEditableContent, useContent } from 'fusion:content';
 
 import { useFusionContext } from 'fusion:context';
 import {
-  Byline, Overline, PromoDate, PromoDescription, PromoHeadline, PromoImage,
+  Byline, Overline, PromoDate, PromoDescription, PromoHeadline, PromoImage, ThemeStyles,
 } from '@wpmedia/shared-styles';
 import {
   extractVideoEmbedFromStory,
@@ -15,8 +15,18 @@ import {
   videoPlayerCustomFields,
 } from '@wpmedia/engine-theme-sdk';
 import { imageRatioCustomField } from '@wpmedia/resizer-image-block';
+import styled, { ThemeContext } from 'styled-components';
 
-import '@wpmedia/shared-styles/scss/_extra-large-promo.scss';
+// import '@wpmedia/shared-styles/scss/_extra-large-promo.scss';
+
+const StyledExtraLargePromo = styled(ThemeStyles)`
+  display: inline-block;
+
+  img {
+    height: auto;
+    width: 100%;
+  }
+`;
 
 const ExtraLargePromoItem = ({ customFields }) => {
   const { arcSite, id, isAdmin } = useFusionContext();
@@ -122,7 +132,7 @@ const ExtraLargePromoItem = ({ customFields }) => {
 
   return (
     <>
-      <article className="container-fluid xl-large-promo">
+      <StyledExtraLargePromo as="article" className="container-fluid xl-large-promo">
         <div className="row">
           {(customFields.showOverline
             || customFields?.showHeadline
@@ -186,7 +196,7 @@ const ExtraLargePromoItem = ({ customFields }) => {
             </div>
           )}
         </div>
-      </article>
+      </StyledExtraLargePromo>
       <hr />
     </>
   );

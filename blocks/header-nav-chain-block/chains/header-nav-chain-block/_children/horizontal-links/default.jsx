@@ -7,7 +7,7 @@ import getTranslatedPhrases from 'fusion:intl';
 import getThemeStyle from 'fusion:themes';
 import Link from './_children/link';
 
-import './links-bar.scss';
+// import './links-bar.scss';
 
 const LinkBarSpan = styled.span`
   color: ${(props) => (props.navBarColor === 'light' ? '#000' : '#fff')};

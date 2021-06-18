@@ -11,6 +11,7 @@ import PromoLabel from './_children/promo-label';
 import SecondaryFont from './_children/secondary-font';
 import SmallPromoContainer from './_children/promo-helpers/small/container';
 import SmallPromoStyles from './_children/promo-helpers/small/styles';
+import ThemeStyles from './_children/theme-styles';
 
 export {
   Byline,
@@ -26,4 +27,5 @@ export {
   SecondaryFont,
   SmallPromoContainer,
   SmallPromoStyles,
+  ThemeStyles,
 };
