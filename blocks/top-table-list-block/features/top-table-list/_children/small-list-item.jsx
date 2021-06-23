@@ -36,7 +36,6 @@ const SmallListItem = (props) => {
         {showHeadlineSM ? (
           <PromoHeadline
             content={element}
-            className="headline-wrap"
             linkClassName="sm-promo-headline"
             headingClassName="sm-promo-headline"
             editable={false}

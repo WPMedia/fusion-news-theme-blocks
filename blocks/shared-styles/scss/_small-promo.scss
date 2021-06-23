@@ -34,6 +34,13 @@
     margin: 0;
     padding: 0 map-get($spacers, 'xxs') 0 0;
     text-decoration: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: calculateRem(72px);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    -moz-box-oriented: vertical;
     @media screen and (min-width: map-get($grid-breakpoints, 'md')) {
       padding: 0;
     }
