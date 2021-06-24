@@ -1,7 +1,8 @@
+/* eslint-disable jsx-a11y/no-onchange */
 import React from 'react';
-import styled from 'styled-components';
 // import { useFusionContext } from 'fusion:context';
-
+import getCSSVariables from './utils/getCSSVariables';
+import LowerFooter from './styles/LowerFooter';
 /*
 Do it live
 
@@ -25,93 +26,65 @@ document.documentElement.style.setProperty(
         'red',
       );
 
+      0: (2) ["--colors-primary", "deeppink"]
+1: (2) ["--colors-background", "tan"]
+
+limitation: named colors don't work in picker
 */
 
-const ThemeLowerFooter = styled.div`
-  position: fixed;
-  /* on the editor this should be 50 */
-  bottom: 25px;
-  left: 0;
-  right: 0;
-  height: 100px;
-  width: 90%;
-  margin: 0 5%;
-  /* generated via https://glassmorphism.com/ */
-  background: rgba( 48, 50, 61, 0.55 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  backdrop-filter: blur( 20.0px );
-  -webkit-backdrop-filter: blur( 20.0px );
-  border-radius: 10px;
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
-`;
-
-const ThemeStyle = () => {
 /*
- Check if the stylesheet is internal or hosted on the current domain.
- If it isn't, attempting to access sheet.cssRules will throw a cross origin error.
- See https://developer.mozilla.org/en-US/docs/Web/API/CSSStyleSheet#Notes
+    0: (2) ["--colors-primary", "deeppink"]
+    1: (2) ["--colors-background", "tan"]
 
- NOTE: One problem this could raise is hosting stylesheets on a CDN with a
- different domain. Those would be cross origin, so you can't access them.
-*/
-  const isSameDomain = (styleSheet) => {
-  // Internal style blocks won't have an href value
-    if (!styleSheet.href) {
-      return true;
-    }
+  */
+const ThemeStyle = () => {
+  const cssCustomPropIndex = getCSSVariables();
+  const [targetPropertyIndex, setPropertyIndex] = React.useState(0);
+  const targetProperty = cssCustomPropIndex[targetPropertyIndex][0];
+  const targetPropertyValue = cssCustomPropIndex[targetPropertyIndex][1];
 
-    return styleSheet.href.indexOf(window.location.origin) === 0;
-  };
+  function handleSetPropertyValue(event) {
+    const { value: pickedPropertyValue } = event.target;
+    document.documentElement.style.setProperty(
+      targetProperty,
+      pickedPropertyValue,
+    );
+  }
 
-  /*
- Determine if the given rule is a CSSStyleRule
- See: https://developer.mozilla.org/en-US/docs/Web/API/CSSRule#Type_constants
-*/
-  const isStyleRule = (rule) => rule.type === 1;
-
-  /**
- * Get all custom properties on a page
- * @return array<array[string, string]>
- * ex; [["--color-accent", "#b9f500"], ["--color-text", "#252525"], ...]
- */
-  // styleSheets is array-like, so we convert it to an array.
-  // Filter out any stylesheets not on this domain
-  const getCSSCustomPropIndex = () => [...document.styleSheets].filter(isSameDomain).reduce(
-    (finalArr, sheet) => finalArr.concat(
-      // cssRules is array-like, so we convert it to an array
-      [...sheet.cssRules].filter(isStyleRule).reduce((propValArr, rule) => {
-        const props = [...rule.style]
-          .map((propName) => [
-            propName.trim(),
-            rule.style.getPropertyValue(propName).trim(),
-          ])
-        // Discard any props that don't start with "--". Custom props are required to.
-          .filter(([propName]) => propName.indexOf('--') === 0);
-
-        return [...propValArr, ...props];
-      }, []),
-    ),
-    [],
-  );
-
-  const cssCustomPropIndex = getCSSCustomPropIndex();
-  console.log(cssCustomPropIndex);
+  function handleSetProperty(event) {
+    const { value: pickedPropertyIndex } = event.target;
+    setPropertyIndex(parseInt(pickedPropertyIndex, 10));
+  }
 
   return (
-    <ThemeLowerFooter>
-      <p>Theme Style</p>
-      <label
-        htmlFor="favcolor"
-      >
-        Select your favorite color:
+    <LowerFooter>
+      <label htmlFor="property-picker">
+        Pick Target CSS Variable
+        <select
+          id="property-picker"
+          onChange={handleSetProperty}
+          value={targetPropertyIndex}
+        >
+          {
+          cssCustomPropIndex.map((customPropArray, index) => {
+            const [propertyName] = customPropArray;
+            return (
+              <option value={index}>{propertyName}</option>
+            );
+          })
+        }
+        </select>
       </label>
-      <input
-        type="color"
-        id="favcolor"
-        name="favcolor"
-        value="#ff0000"
-      />
-    </ThemeLowerFooter>
+
+      <label htmlFor="themes-property-picker">
+        <input
+          id="themes-property-picker"
+          type="color"
+          value={targetPropertyValue}
+          onChange={handleSetPropertyValue}
+        />
+      </label>
+    </LowerFooter>
   );
 };
 
