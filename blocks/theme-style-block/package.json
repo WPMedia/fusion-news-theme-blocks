@@ -1,0 +1,25 @@
+{
+  "name": "@wpmedia/theme-style-block",
+  "version": "5.13.2",
+  "description": "Fusion News Theme styleblock",
+  "author": "jackhowa",
+  "homepage": "https://github.com/WPMedia/fusion-news-theme-blocks",
+  "license": "CC-BY-NC-ND-4.0",
+  "main": "index.js",
+  "files": [
+    "features"
+  ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/",
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@github.com/WPMedia/fusion-news-theme-blocks.git",
+    "directory": "blocks/textfile-block"
+  },
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "lint": "eslint --ext js --ext jsx features"
+  }
+}
