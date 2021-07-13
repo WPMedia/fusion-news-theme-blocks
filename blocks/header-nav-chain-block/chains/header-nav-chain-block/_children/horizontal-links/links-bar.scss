@@ -23,7 +23,6 @@
 
   a {
     @include link-color-active-hover($ui-primary-font-color);
-    font-family: $theme-primary-font-family;
     line-height: 14px;
     margin: 8px 0;
     text-align: center;
