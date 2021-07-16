@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
 import { useFusionContext } from 'fusion:context';
 import getThemeStyle from 'fusion:themes';
@@ -30,6 +30,36 @@ const StyledText = styled.p`
 const StyledLink = styled.a`
   border-bottom: 1px solid ${(props) => props.primaryColor};
   color: ${(props) => props.primaryColor};
+`;
+
+// IMPROVEMENT: margin and margin bottom rem is reusable
+const FloatableImageContainer = styled.figure`
+  margin: 0 0 0 1rem;
+
+  @media screen and (min-width: 48rem) {
+    margin-bottom: 1.5rem;
+  }
+
+  ${({ allowedFloatValue }) => allowedFloatValue && css`
+    width: 50%;
+    float: ${allowedFloatValue};
+  `}
+
+  ${({ allowedFloatValue }) => allowedFloatValue === 'left' && css`
+    margin-right: 1rem;
+
+    @media screen and (min-width: 48rem) {
+      margin-right: 1.5rem;
+    }
+  `}
+
+  ${({ allowedFloatValue }) => allowedFloatValue === 'right' && css`
+    margin-left: 1rem;
+
+    @media screen and (min-width: 48rem) {
+      margin-left: 1.5rem;
+    }
+  `}
 `;
 
 function parseArticleItem(item, index, arcSite, phrases, id, customFields) {
@@ -77,19 +107,44 @@ function parseArticleItem(item, index, arcSite, phrases, id, customFields) {
         alt_text: altText,
         resized_params: resizedImageOptions = {},
         vanity_credits: vanityCredits,
+        // alignment not always present
+        alignment = '',
       } = item;
 
+      let widthsObject = {
+        small: 768,
+        medium: 1024,
+        large: 1440,
+      };
+
+      // only left and right float supported
+      const allowedFloatValue = alignment === 'left' || alignment === 'right' ? alignment : '';
+
+      if (allowedFloatValue) {
+        // cut the image width in about half if left or right aligned
+        // matched based on allowed widths
+        // the goal was to show 50% of width
+        widthsObject = {
+          small: 274,
+          medium: 400,
+          large: 768,
+        };
+      }
+
       return (url && url.length > 0) ? (
-        <figure key={key}>
+        <FloatableImageContainer
+          key={key}
+          allowedFloatValue={allowedFloatValue}
+        >
           <Image
             resizedImageOptions={resizedImageOptions}
             url={url}
             alt={altText}
-            smallWidth={768}
+            smallWidth={widthsObject.small}
             smallHeight={0}
-            mediumWidth={1024}
+            mediumWidth={widthsObject.medium}
             mediumHeight={0}
-            largeWidth={1440}
+            largeWidth={widthsObject.large}
             largeHeight={0}
             breakpoints={getProperties(arcSite)?.breakpoints}
             resizerURL={getProperties(arcSite)?.resizerURL}
@@ -102,7 +157,7 @@ function parseArticleItem(item, index, arcSite, phrases, id, customFields) {
               vanityCredits={vanityCredits}
             />
           </figcaption>
-        </figure>
+        </FloatableImageContainer>
       ) : null;
     }
 
@@ -161,7 +216,7 @@ function parseArticleItem(item, index, arcSite, phrases, id, customFields) {
 
       return (item.text && item.text.length > 0) ? (
         <Fragment key={key}>
-          <section className="correction">
+          <section className="correction container-margin-responsive-bottom">
             <h2 className="h6-primary">{labelText}</h2>
             <p>{item.text}</p>
           </section>

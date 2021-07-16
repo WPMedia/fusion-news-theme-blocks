@@ -48,7 +48,6 @@
 
   .gallery {
     .image-metadata {
-      color: $image-caption-rule-color;
       font-size: calculateRem(14px);
       line-height: calculateRem(24px);
       margin: 8px 0;
@@ -60,13 +59,7 @@
   }
 
   figure {
-    @include block-margin-bottom;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-
     p {
-      color: $image-caption-rule-color;
       font-size: calculateRem(14px);
       line-height: 1rem;
       margin: 8px 0;
