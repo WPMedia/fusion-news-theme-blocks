@@ -1,0 +1,50 @@
+name: test blocks publish to test tag
+on:
+  push:
+    branches:
+      - TMEDIA-324-lerna-independent-versioning
+
+# Publishes test builds with the dist tag of "test" and
+# with a version of 0.0.0 with a short git SHA appended to
+# the end.
+jobs:
+  publish:
+    name: test block publish
+    runs-on: ubuntu-latest
+    env:
+      SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Cache NPM files
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12"
+          registry-url: "https://npm.pkg.github.com"
+      - run: npm ci
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+
+      - name: Run tests
+        run: npm run test
+
+      - name: Get current datetime for re-running publish if necessary
+        id: get-datetime
+        run: echo "::set-output name=date::$(date +'%Y%m%d%H%M%S')"
+
+      - name: Publish to test tag with a short git SHA as the version
+        run: npx lerna publish 0.0.0-test.$(git rev-parse --short HEAD).${{ steps.get-datetime.outputs.date }} --no-git-tag-version --no-push --dist-tag test --yes
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Check test failure status
+        uses: act10ns/slack@v1
+        with:
+          status: ${{ job.status }}
+        if: failure()
