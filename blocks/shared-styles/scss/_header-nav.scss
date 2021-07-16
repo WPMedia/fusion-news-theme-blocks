@@ -1,12 +1,8 @@
 $arrow-size: calculateRem(10px);
-$border-color-dull: rgba(255, 255, 255, 0.5);
-$border-color-bright: rgba(255, 255, 255, 1);
 $border-width: 1px;
 $btn-size: calculateRem(32px);
 $btn-padding: calculateRem(8px);
-$nav-search-border-color: $ui-light-gray;
 $overlay-z-index: 2;
-$section-bg: #292929;
 $section-width: 329px;
 
 body.nav-open {
@@ -36,18 +32,18 @@ body.nav-open {
 
   &-dark {
     span {
-      color: $ui-btn-white-color;
+      color: #fff;
     }
 
     svg > path {
-      fill: $ui-btn-white-color;
+      fill: #fff;
     }
 
     &.border {
-      border: $border-width solid $border-color-dull;
+      border: $border-width solid rgba(255, 255, 255, 0.5);
 
       &:hover {
-        border: $border-width solid $border-color-bright;
+        border: $border-width solid rgba(255, 255, 255, 1);
       }
     }
 
@@ -55,18 +51,18 @@ body.nav-open {
 
   &-light {
     span {
-      color: $ui-medium-gray;
+      color: #575757;
     }
 
     svg > path {
-      fill: $ui-medium-gray;
+      fill: #575757;
     }
 
     &.border {
-      border: $border-width solid $ui-light-gray;
+      border: $border-width solid #dadada;
 
       &:hover {
-        border: $border-width solid $ui-medium-gray;
+        border: $border-width solid #575757;
       }
     }
   }
@@ -125,11 +121,11 @@ body.nav-open {
     }
 
     &.dark input {
-      border: $border-width solid $border-color-bright;
+      border: $border-width solid rgba(255, 255, 255, 1);
     }
 
     &.light input {
-      border: $border-width solid $ui-light-gray;
+      border: $border-width solid #dadada;
     }
   }
 
@@ -172,7 +168,7 @@ body.nav-open {
   flex-shrink: 0;
 
   &.light {
-    border-bottom: $border-width solid $border-rule-color;
+    border-bottom: $border-width solid #dadada;
   }
 
   * {
@@ -318,7 +314,7 @@ body.nav-open {
   }
 
   .inner-drawer-nav {
-    background-color: $section-bg;
+    background-color: #292929;
     display: flex;
     flex-direction: column;
     transition: transform 300ms ease-in-out;
@@ -402,7 +398,7 @@ body.nav-open {
 
       &:hover,
       &:active {
-        background: $ui-medium-gray;
+        background: #575757;
       }
     }
   }
@@ -453,7 +449,7 @@ body.nav-open {
 
     > li {
       > a {
-        color: $ui-medium-gray;
+        color: #575757;
         display: block;
         font-size: 16px;
         font-weight: bold;
@@ -462,7 +458,7 @@ body.nav-open {
         text-decoration: none;
 
         &:hover {
-          background-color: $ui-light-gray;
+          background-color: #dadada;
         }
       }
     }
@@ -506,7 +502,7 @@ body.nav-open {
     display: flex;
 
     path {
-      fill: $ui-medium-gray;
+      fill: #575757;
     }
   }
 }

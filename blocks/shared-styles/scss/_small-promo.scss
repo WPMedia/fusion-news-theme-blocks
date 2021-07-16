@@ -1,5 +1,5 @@
 .small-promo {
-  color: $ui-primary-font-color;
+  color: #191919;
   margin-top: 0;
 
   @media screen and (min-width: map-get($grid-breakpoints, 'sm')) {
@@ -13,7 +13,7 @@
   }
 
   a {
-    color: $ui-primary-font-color;
+    color: #191919;
     position: relative;
 
     h2 {
@@ -27,7 +27,7 @@
   }
 
   .sm-promo-headline {
-    @include link-color-active-hover($ui-primary-font-color);
+    @include link-color-active-hover(#191919);
     font-size: calculateRem(16px);
     font-weight: normal;
     line-height: calculateRem(24px);

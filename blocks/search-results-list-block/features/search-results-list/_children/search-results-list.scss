@@ -11,7 +11,7 @@
 
 .search-bar {
   background-color: #fff;
-  border: 1px solid $ui-medium-gray;
+  border: 1px solid #575757;
   border-radius: 2px;
   border-bottom-right-radius: 0;
   border-top-right-radius: 0;
@@ -31,14 +31,14 @@
 }
 
 .btn {
-  border: 1px solid $ui-medium-gray;
+  border: 1px solid #575757;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   height: 48px;
   margin-left: -0.2%;
 }
 
 .search-results-text {
-  color: $ui-primary-font-color;
+  color: #191919;
   font-size: 14px;
   margin-top: 20px;
   text-align: left;

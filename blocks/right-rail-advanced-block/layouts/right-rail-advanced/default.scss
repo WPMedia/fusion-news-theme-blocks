@@ -34,7 +34,7 @@ body {
 .advanced-grid-desktop-main-area {
   padding: 0;
   @media screen and (min-width: map-get($grid-breakpoints, 'lg')) {
-    border-right: 1px solid $border-rule-color;
+    border-right: 1px solid #dadada;
     padding: 0 map-get($spacers, 'lg') 0 0;
   }
 }

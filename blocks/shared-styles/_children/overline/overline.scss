@@ -1,5 +1,5 @@
 .overline {
-  color: $ui-primary-font-color;
+  color: #191919;
   display: inline-block;
   font-size: calculateRem(20px);
   font-weight: bold;
@@ -8,6 +8,6 @@
   text-decoration: none;
 
   &--link {
-    @include link-color-active-hover($ui-primary-font-color);
+    @include link-color-active-hover(#191919);
   }
 }

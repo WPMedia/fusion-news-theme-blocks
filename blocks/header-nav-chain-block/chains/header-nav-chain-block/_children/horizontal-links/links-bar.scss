@@ -22,7 +22,7 @@
   justify-content: center;
 
   a {
-    @include link-color-active-hover($ui-primary-font-color);
+    @include link-color-active-hover(#191919);
     line-height: 14px;
     margin: 8px 0;
     text-align: center;

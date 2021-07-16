@@ -15,23 +15,23 @@
 }
 
 .list-item {
-  box-shadow: inset 0 -1px 0 0 $ui-light-gray;
+  box-shadow: inset 0 -1px 0 0 #dadada;
   padding: map-get($spacers, 'sm') 0 map-get($spacers, 'sm') 0;
 
   a {
-    @include link-color-active-hover($ui-primary-font-color);
-    color: $ui-primary-font-color;
+    @include link-color-active-hover(#191919);
+    color: #191919;
     text-decoration: none;
 
     & * {
-      @include link-color-active-hover($ui-primary-font-color);
+      @include link-color-active-hover(#191919);
     }
   }
 
   a,
   h2,
   p {
-    color: $ui-primary-font-color;
+    color: #191919;
   }
 
   img {

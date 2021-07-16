@@ -103,16 +103,6 @@ footer {
         margin: 0 auto;
         width: 24px;
       }
-
-      // svg path {
-      //   fill: $primary-color;
-      // }
-
-      // &:hover {
-      //   svg path {
-      //     fill: $primary-color;
-      //   }
-      // }
     }
   }
 
@@ -147,7 +137,7 @@ footer {
       margin: map-get($spacers, 'xs') 0;
 
       > a {
-        color: $ui-medium-gray;
+        color: #575757;
         text-decoration: none;
       }
     }

@@ -42,8 +42,8 @@
     padding: map-get($spacers, 'sm') 0 map-get($spacers, 'sm') 0;
     text-align: center;
   }
-  border-bottom: 1px solid $border-rule-color;
-  border-top: 1px solid $border-rule-color;
+  border-bottom: 1px solid #dadada;
+  border-top: 1px solid #dadada;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -83,14 +83,14 @@
   width: 24px;
 
   path {
-    fill: rgba($ui-medium-gray, 1);
+    fill: rgba(#575757, 1);
     transition: all 0.2s ease-in-out;
   }
 }
 
 .social-column:hover > svg {
   path {
-    fill: rgba($ui-medium-gray, 0.8);
+    fill: rgba(#575757, 0.8);
   }
 }
 

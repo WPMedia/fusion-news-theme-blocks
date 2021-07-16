@@ -3,7 +3,7 @@
   @include block-internal-spacing;
 
   .list-title {
-    color: $ui-primary-font-color;
+    color: #191919;
     font-size: calculateRem(20px);
     font-weight: bold;
     line-height: calculateRem(24px);
@@ -26,7 +26,7 @@
   justify-content: space-between;
 
   .list-item-number {
-    color: $ui-dark-secondary-color;
+    color: #191919;
     flex: 0 0 calculateRem(40px);
     font-size: calculateRem(20px);
     font-weight: bold;
@@ -45,8 +45,8 @@
   }
 
   .headline-list-anchor {
-    @include link-color-active-hover($ui-primary-font-color);
-    color: $ui-primary-font-color;
+    @include link-color-active-hover(#191919);
+    color: #191919;
     display: flex;
     padding-right: calculateRem(16px);
     text-decoration: none;

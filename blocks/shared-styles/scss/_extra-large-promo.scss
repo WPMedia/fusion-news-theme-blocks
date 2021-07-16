@@ -1,8 +1,8 @@
 .xl-large-promo {
-  color: $ui-primary-font-color;
+  color: #191919;
 
   a {
-    color: $ui-primary-font-color;
+    color: #191919;
     position: relative;
   }
 
@@ -20,7 +20,7 @@
   }
 
   .xl-promo-headline {
-    @include link-color-active-hover($ui-primary-font-color);
+    @include link-color-active-hover(#191919);
     display: block;
     font-size: calculateRem(32px);
     font-weight: bold;

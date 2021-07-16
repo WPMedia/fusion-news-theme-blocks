@@ -1,11 +1,9 @@
-$alert-bar-height: 56px;
-
 .alert-bar {
   align-items: center;
-  background-color: $danger-color;
+  background-color: #db0a07;
   display: flex;
   flex-wrap: nowrap;
-  height: $alert-bar-height;
+  height: 56px;
   justify-content: space-between;
   overflow: hidden;
   padding-left: calculateRem(20px);

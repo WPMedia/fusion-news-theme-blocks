@@ -3,12 +3,12 @@
 }
 
 .article-body-wrapper {
-  color: $ui-primary-font-color;
+  color: #191919;
   margin-top: map-get($spacers, 'lg');
 
   a,
   a * {
-    @include link-color-active-hover($ui-primary-font-color);
+    @include link-color-active-hover(#191919);
   }
 
   & > h1,
@@ -48,7 +48,6 @@
 
   .gallery {
     .image-metadata {
-      color: $image-caption-rule-color;
       font-size: calculateRem(14px);
       line-height: calculateRem(24px);
       margin: 8px 0;
@@ -66,7 +65,6 @@
     margin-top: 0;
 
     p {
-      color: $image-caption-rule-color;
       font-size: calculateRem(14px);
       line-height: 1rem;
       margin: 8px 0;
@@ -124,19 +122,19 @@
     overflow-x: auto;
 
     table {
-      border: 1px solid $border-rule-color;
+      border: 1px solid #dadada;
       border-collapse: collapse;
-      color: $ui-primary-font-color;
+      color: #191919;
       width: 100%;
 
       thead {
         background-color: #eee;
-        border: 2px solid $border-rule-color;
+        border: 2px solid #dadada;
       }
 
       th,
       td {
-        border: 1px solid $border-rule-color;
+        border: 1px solid #dadada;
         padding: map-get($spacers, 'xxs') map-get($spacers, 'xs');
         text-align: center;
       }
@@ -179,7 +177,7 @@
     }
 
     .citation-text {
-      color: $ui-primary-font-color;
+      color: #191919;
       display: block;
       font-size: calculateRem(16px);
       font-style: normal;
@@ -195,7 +193,7 @@
   }
 
   .pullquote {
-    box-shadow: inset 0 -5px 0 0 $ui-light-gray, inset 0 5px 0 0 $ui-light-gray;
+    box-shadow: inset 0 -5px 0 0 #dadada, inset 0 5px 0 0 #dadada;
     font-size: calculateRem(19px);
     font-weight: bold;
     line-height: calculateRem(24px);
@@ -235,7 +233,7 @@
     margin: 0 0 map-get($spacers, 'md');
 
     a {
-      @include link-color-active-hover($ui-primary-font-color);
+      @include link-color-active-hover(#191919);
       text-decoration: none;
 
       &:active,
@@ -252,7 +250,7 @@
 
   .correction {
     @include block-margin-bottom;
-    box-shadow: inset 0 -1px 0 0 $ui-light-gray;
+    box-shadow: inset 0 -1px 0 0 #dadada;
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
@@ -260,7 +258,7 @@
     padding: map-get($spacers, 'sm') 0;
 
     p {
-      color: $ui-medium-gray;
+      color: #575757;
       display: inline;
       font-size: calculateRem(18px);
       font-style: italic;

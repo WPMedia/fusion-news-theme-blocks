@@ -1,13 +1,8 @@
 $arrow-size: calculateRem(10px);
-$border-color-dull: rgba(255, 255, 255, 0.5);
-$border-color-bright: rgba(255, 255, 255, 1);
 $border-width: 1px;
 $btn-size: calculateRem(32px);
-$nav-search-border-color: $ui-light-gray;
 $overlay-z-index: 2;
-$section-bg: $ui-medium-gray;
 $section-width: 315px;
-$submenu-link-color: $ui-dark-gray;
 
 .nav-block-search {
   display: flex;
@@ -19,7 +14,7 @@ $submenu-link-color: $ui-dark-gray;
   }
 
   &.open.light {
-    border: $border-width solid $ui-light-gray;
+    border: $border-width solid #dadada;
   }
 
   &.open {
@@ -111,14 +106,14 @@ $submenu-link-color: $ui-dark-gray;
   }
 
   .inner-drawer-nav {
-    background-color: $section-bg;
+    background-color: #292929;
     display: flex;
     flex-direction: column;
     width: $section-width;
   }
 
   .nav-block-search {
-    border-bottom: $border-width solid $nav-search-border-color;
+    border-bottom: $border-width solid #dadada;
     margin: 16px 20px 0;
     padding-bottom: 16px;
 
@@ -157,7 +152,7 @@ $submenu-link-color: $ui-dark-gray;
       }
 
       &:hover {
-        background: darken($section-bg, 20%);
+        background: darken(#292929, 20%);
 
         .subsection-container {
           opacity: 1;
@@ -201,11 +196,11 @@ $submenu-link-color: $ui-dark-gray;
 
     > li {
       > a {
-        color: $submenu-link-color;
+        color: #191919;
         padding: 8px 0;
 
         &:hover {
-          color: darken($submenu-link-color, 20%);
+          color: darken(#191919, 20%);
         }
       }
 

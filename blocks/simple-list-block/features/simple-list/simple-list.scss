@@ -6,7 +6,7 @@
   padding-top: 0;
 
   .list-title {
-    color: $ui-primary-font-color;
+    color: #191919;
     font-size: calculateRem(20px);
     font-weight: bold;
     line-height: calculateRem(24px);
@@ -39,8 +39,8 @@
     }
 
     .simple-list-headline-anchor {
-      @include link-color-active-hover($ui-primary-font-color);
-      color: $ui-primary-font-color;
+      @include link-color-active-hover(#191919);
+      color: #191919;
       display: flex;
       padding-left: calculateRem(16px);
       text-decoration: none;

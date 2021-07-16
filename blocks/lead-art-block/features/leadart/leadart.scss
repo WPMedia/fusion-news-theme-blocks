@@ -12,7 +12,6 @@
     margin-top: map-get($spacers, 'xs');
 
     p.image-metadata {
-      color: $image-caption-rule-color;
       font-size: calculateRem(14px);
       line-height: calculateRem(24px);
       margin: 8px 0;
@@ -35,7 +34,7 @@
     padding-left: 0;
 
     svg {
-      fill: $ui-medium-gray;
+      fill: #575757;
       height: 1rem;
       margin-right: 4px;
       width: 1rem;

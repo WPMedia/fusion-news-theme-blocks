@@ -1,8 +1,8 @@
 .medium-promo {
-  color: $ui-primary-font-color;
+  color: #191919;
 
   a {
-    color: $ui-primary-font-color;
+    color: #191919;
     position: relative;
     text-decoration: none;
 
@@ -12,7 +12,7 @@
   }
 
   .md-promo-headline {
-    @include link-color-active-hover($ui-primary-font-color);
+    @include link-color-active-hover(#191919);
     display: block;
     margin-bottom: map-get($spacers, 'sm');
     text-decoration: none;
