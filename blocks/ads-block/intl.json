@@ -1,12 +1,28 @@
 {
 	"ads-block.ad-label": {
-		"de": "ADVERTISEMENT",
-		"en": "ADVERTISEMENT",
-		"es": "ADVERTISEMENT",
-		"fr": "ADVERTISEMENT",
-		"ja": "ADVERTISEMENT",
-		"ko": "ADVERTISEMENT",
-		"no": "ADVERTISEMENT",
-		"sv": "ADVERTISEMENT"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "ADVERTISEMENT"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": "PUBLICITÉ"
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

@@ -1,32 +1,80 @@
 {
-	"article-body-block.clarification": {
-		"de": "Klarstellung",
-		"en": "Clarification",
-		"es": "Aclaración",
-		"fr": "Précision",
-		"ja": "説明",
-		"ko": "설명",
-		"no": "Avklaring",
-		"sv": "Klargörande"
-	},
 	"article-body-block.correction": {
-		"de": "Korrektur",
-		"en": "Correction",
-		"es": "Corrección",
-		"fr": "Correction",
-		"ja": "修正",
-		"ko": "정정",
-		"no": "Korreksjon",
-		"sv": "Korrektion"
+		"de": {
+			"translation": "Korrektur"
+		},
+		"en": {
+			"translation": "Correction"
+		},
+		"es": {
+			"translation": "Corrección"
+		},
+		"fr": {
+			"translation": "Correction"
+		},
+		"ja": {
+			"translation": "修正"
+		},
+		"ko": {
+			"translation": "정정"
+		},
+		"no": {
+			"translation": "Korreksjon"
+		},
+		"sv": {
+			"translation": "Korrektion"
+		}
+	},
+	"article-body-block.clarification": {
+		"de": {
+			"translation": "Klarstellung"
+		},
+		"en": {
+			"translation": "Clarification"
+		},
+		"es": {
+			"translation": "Aclaración"
+		},
+		"fr": {
+			"translation": "Précision"
+		},
+		"ja": {
+			"translation": "説明"
+		},
+		"ko": {
+			"translation": "설명"
+		},
+		"no": {
+			"translation": "Avklaring"
+		},
+		"sv": {
+			"translation": "Klargörande"
+		}
 	},
 	"article-body-block.interstitial-link-aria-label": {
-		"de": "Open related story",
-		"en": "Open related story",
-		"es": "Open related story",
-		"fr": "Open related story",
-		"ja": "Open related story",
-		"ko": "Open related story",
-		"no": "Open related story",
-		"sv": "Open related story"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Open related story"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

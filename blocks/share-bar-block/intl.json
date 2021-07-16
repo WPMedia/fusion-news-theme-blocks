@@ -1,12 +1,28 @@
 {
 	"share-bar-block.share-button-aria-label": {
-		"de": "Share current article via %{socialType}",
-		"en": "Share current article via %{socialType}",
-		"es": "Share current article via %{socialType}",
-		"fr": "Share current article via %{socialType}",
-		"ja": "Share current article via %{socialType}",
-		"ko": "Share current article via %{socialType}",
-		"no": "Share current article via %{socialType}",
-		"sv": "Share current article via %{socialType}"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Share current article via %{socialType}"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

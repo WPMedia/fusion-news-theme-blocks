@@ -1,12 +1,28 @@
 {
 	"default-output-block.skip-main": {
-		"de": "Skip To Content",
-		"en": "Skip To Content",
-		"es": "Skip To Content",
-		"fr": "Skip To Content",
-		"ja": "Skip To Content",
-		"ko": "Skip To Content",
-		"no": "Skip To Content",
-		"sv": "Skip To Content"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Skip To Content"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

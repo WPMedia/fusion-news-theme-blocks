@@ -1,12 +1,28 @@
 {
 	"links-bar-block.element-aria-label": {
-		"de": "More Links",
-		"en": "More Links",
-		"es": "More Links",
-		"fr": "More Links",
-		"ja": "More Links",
-		"ko": "More Links",
-		"no": "More Links",
-		"sv": "More Links"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "More Links"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

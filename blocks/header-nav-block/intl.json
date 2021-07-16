@@ -1,32 +1,80 @@
 {
-	"header-nav-block.search-text": {
-		"de": "Search",
-		"en": "Search",
-		"es": "Search",
-		"fr": "Search",
-		"ja": "Search",
-		"ko": "Search",
-		"no": "Søk",
-		"sv": "Sök"
-	},
 	"header-nav-block.sections-button": {
-		"de": "Sections",
-		"en": "Sections",
-		"es": "Sections",
-		"fr": "Sections",
-		"ja": "Sections",
-		"ko": "Sections",
-		"no": "Meny",
-		"sv": "Meny"
+		"de": {
+			"translation": "Sections"
+		},
+		"en": {
+			"translation": "Sections"
+		},
+		"es": {
+			"translation": "Sections"
+		},
+		"fr": {
+			"translation": "Sections"
+		},
+		"ja": {
+			"translation": "Sections"
+		},
+		"ko": {
+			"translation": "Sections"
+		},
+		"no": {
+			"translation": "Meny"
+		},
+		"sv": {
+			"translation": "Meny"
+		}
 	},
 	"header-nav-block.sign-in-button": {
-		"de": "Sign In",
-		"en": "Sign In",
-		"es": "Sign In",
-		"fr": "Sign In",
-		"ja": "Sign In",
-		"ko": "Sign In",
-		"no": "Logg inn",
-		"sv": "Logga in"
+		"de": {
+			"translation": "Sign In"
+		},
+		"en": {
+			"translation": "Sign In"
+		},
+		"es": {
+			"translation": "Sign In"
+		},
+		"fr": {
+			"translation": "Sign In"
+		},
+		"ja": {
+			"translation": "Sign In"
+		},
+		"ko": {
+			"translation": "Sign In"
+		},
+		"no": {
+			"translation": "Logg inn"
+		},
+		"sv": {
+			"translation": "Logga in"
+		}
+	},
+	"header-nav-block.search-text": {
+		"de": {
+			"translation": "Search"
+		},
+		"en": {
+			"translation": "Search"
+		},
+		"es": {
+			"translation": "Search"
+		},
+		"fr": {
+			"translation": "Search"
+		},
+		"ja": {
+			"translation": "Search"
+		},
+		"ko": {
+			"translation": "Search"
+		},
+		"no": {
+			"translation": "Søk"
+		},
+		"sv": {
+			"translation": "Sök"
+		}
 	}
 }

@@ -1,52 +1,132 @@
 {
-	"byline.and-text": {
-		"de": "und",
-		"en": "and",
-		"es": "y",
-		"fr": "et",
-		"ja": "및",
-		"ko": "및",
-		"no": "og",
-		"sv": "och"
-	},
-	"byline.by-text": {
-		"de": "Von",
-		"en": "By",
-		"es": "Por",
-		"fr": "Par",
-		"ja": "担当者：",
-		"ko": "저작자",
-		"no": "Av",
-		"sv": "Av"
-	},
-	"overline.sponsored-content": {
-		"de": "Sponsored Content",
-		"en": "Sponsored Content",
-		"es": "Sponsored Content",
-		"fr": "Contenu sponsorisé",
-		"ja": "Sponsored Content",
-		"ko": "Sponsored Content",
-		"no": "Sponsored Content",
-		"sv": "Sponsored Content"
-	},
 	"promo-label.gallery-text": {
-		"de": "Galerie",
-		"en": "Gallery",
-		"es": "Galería",
-		"fr": "Galerie",
-		"ja": "ギャラリー",
-		"ko": "갤러리",
-		"no": "Bildegalleri",
-		"sv": "Bildspel"
+		"de": {
+			"translation": "Galerie"
+		},
+		"en": {
+			"translation": "Gallery"
+		},
+		"es": {
+			"translation": "Galería"
+		},
+		"fr": {
+			"translation": "Galerie"
+		},
+		"ja": {
+			"translation": "ギャラリー"
+		},
+		"ko": {
+			"translation": "갤러리"
+		},
+		"no": {
+			"translation": "Bildegalleri"
+		},
+		"sv": {
+			"translation": "Bildspel"
+		}
 	},
 	"promo-label.video-text": {
-		"de": "Video",
-		"en": "Video",
-		"es": "Video",
-		"fr": "Vidéo",
-		"ja": "ビデオ",
-		"ko": "비디오",
-		"no": "Video",
-		"sv": "Video"
+		"de": {
+			"translation": "Video"
+		},
+		"en": {
+			"translation": "Video"
+		},
+		"es": {
+			"translation": "Video"
+		},
+		"fr": {
+			"translation": "Vidéo"
+		},
+		"ja": {
+			"translation": "ビデオ"
+		},
+		"ko": {
+			"translation": "비디오"
+		},
+		"no": {
+			"translation": "Video"
+		},
+		"sv": {
+			"translation": "Video"
+		}
+	},
+	"byline.by-text": {
+		"de": {
+			"translation": "Von"
+		},
+		"en": {
+			"translation": "By"
+		},
+		"es": {
+			"translation": "Por"
+		},
+		"fr": {
+			"translation": "Par"
+		},
+		"ja": {
+			"translation": "担当者："
+		},
+		"ko": {
+			"translation": "저작자"
+		},
+		"no": {
+			"translation": "Av"
+		},
+		"sv": {
+			"translation": "Av"
+		}
+	},
+	"byline.and-text": {
+		"de": {
+			"translation": "und"
+		},
+		"en": {
+			"translation": "and"
+		},
+		"es": {
+			"translation": "y"
+		},
+		"fr": {
+			"translation": "et"
+		},
+		"ja": {
+			"translation": "및"
+		},
+		"ko": {
+			"translation": "및"
+		},
+		"no": {
+			"translation": "og"
+		},
+		"sv": {
+			"translation": "och"
+		}
+	},
+	"overline.sponsored-content": {
+		"de": {
+			"translation": "Werblicher Inhalt"
+		},
+		"en": {
+			"translation": "Sponsored Content"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": "Contenu sponsorisé"
+		},
+		"ja": {
+			"translation": "スポンサー付きコンテンツ"
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

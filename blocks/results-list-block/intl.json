@@ -1,22 +1,54 @@
 {
 	"results-list-block.see-more-button": {
-		"de": "Mehr anzeigen",
-		"en": "See More",
-		"es": "Ver más",
-		"fr": "En savoir plus",
-		"ja": "詳細",
-		"ko": "자세히 보기",
-		"no": "Se mer",
-		"sv": "Fler artiklar"
+		"de": {
+			"translation": "Mehr anzeigen"
+		},
+		"en": {
+			"translation": "See More"
+		},
+		"es": {
+			"translation": "Ver más"
+		},
+		"fr": {
+			"translation": "En savoir plus"
+		},
+		"ja": {
+			"translation": "詳細"
+		},
+		"ko": {
+			"translation": "자세히 보기"
+		},
+		"no": {
+			"translation": "Se mer"
+		},
+		"sv": {
+			"translation": "Fler artiklar"
+		}
 	},
 	"results-list-block.see-more-button-aria-label": {
-		"de": "See More stories about this topic",
-		"en": "See More stories about this topic",
-		"es": "See More stories about this topic",
-		"fr": "See More stories about this topic",
-		"ja": "See More stories about this topic",
-		"ko": "See More stories about this topic",
-		"no": "See More stories about this topic",
-		"sv": "See More stories about this topic"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "See More stories about this topic"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

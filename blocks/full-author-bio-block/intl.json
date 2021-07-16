@@ -1,152 +1,392 @@
 {
 	"full-author-bio-block.connect-text": {
-		"de": "Verbinden",
-		"en": "Connect",
-		"es": "Conectar",
-		"fr": "Connecter",
-		"ja": "接続",
-		"ko": "연결",
-		"no": "Kontakt",
-		"sv": "Följ"
+		"de": {
+			"translation": "Verbinden"
+		},
+		"en": {
+			"translation": "Connect"
+		},
+		"es": {
+			"translation": "Conectar"
+		},
+		"fr": {
+			"translation": "Connecter"
+		},
+		"ja": {
+			"translation": "接続"
+		},
+		"ko": {
+			"translation": "연결"
+		},
+		"no": {
+			"translation": "Kontakt"
+		},
+		"sv": {
+			"translation": "Följ"
+		}
 	},
 	"full-author-bio-block.social-email": {
-		"de": "Email",
-		"en": "Email",
-		"es": "Email",
-		"fr": "Email",
-		"ja": "Email",
-		"ko": "Email",
-		"no": "Email",
-		"sv": "Email"
-	},
-	"full-author-bio-block.social-facebook": {
-		"de": "Connect on Facebook",
-		"en": "Connect on Facebook",
-		"es": "Connect on Facebook",
-		"fr": "Connect on Facebook",
-		"ja": "Connect on Facebook",
-		"ko": "Connect on Facebook",
-		"no": "Connect on Facebook",
-		"sv": "Connect on Facebook"
-	},
-	"full-author-bio-block.social-instagram": {
-		"de": "Follow on Instagram",
-		"en": "Follow on Instagram",
-		"es": "Follow on Instagram",
-		"fr": "Follow on Instagram",
-		"ja": "Follow on Instagram",
-		"ko": "Follow on Instagram",
-		"no": "Follow on Instagram",
-		"sv": "Follow on Instagram"
-	},
-	"full-author-bio-block.social-linkedin": {
-		"de": "Connect on LinkedIn",
-		"en": "Connect on LinkedIn",
-		"es": "Connect on LinkedIn",
-		"fr": "Connect on LinkedIn",
-		"ja": "Connect on LinkedIn",
-		"ko": "Connect on LinkedIn",
-		"no": "Connect on LinkedIn",
-		"sv": "Connect on LinkedIn"
-	},
-	"full-author-bio-block.social-medium": {
-		"de": "Connect on Medium",
-		"en": "Connect on Medium",
-		"es": "Connect on Medium",
-		"fr": "Connect on Medium",
-		"ja": "Connect on Medium",
-		"ko": "Connect on Medium",
-		"no": "Connect on Medium",
-		"sv": "Connect on Medium"
-	},
-	"full-author-bio-block.social-pinterest": {
-		"de": "Connect on Pinterest",
-		"en": "Connect on Pinterest",
-		"es": "Connect on Pinterest",
-		"fr": "Connect on Pinterest",
-		"ja": "Connect on Pinterest",
-		"ko": "Connect on Pinterest",
-		"no": "Connect on Pinterest",
-		"sv": "Connect on Pinterest"
-	},
-	"full-author-bio-block.social-reddit": {
-		"de": "Connect on Reddit",
-		"en": "Connect on Reddit",
-		"es": "Connect on Reddit",
-		"fr": "Connect on Reddit",
-		"ja": "Connect on Reddit",
-		"ko": "Connect on Reddit",
-		"no": "Connect on Reddit",
-		"sv": "Connect on Reddit"
-	},
-	"full-author-bio-block.social-rss": {
-		"de": "RSS Feed",
-		"en": "RSS Feed",
-		"es": "RSS Feed",
-		"fr": "RSS Feed",
-		"ja": "RSS Feed",
-		"ko": "RSS Feed",
-		"no": "RSS Feed",
-		"sv": "RSS Feed"
-	},
-	"full-author-bio-block.social-snapchat": {
-		"de": "Connect on Snapchat",
-		"en": "Connect on Snapchat",
-		"es": "Connect on Snapchat",
-		"fr": "Connect on Snapchat",
-		"ja": "Connect on Snapchat",
-		"ko": "Connect on Snapchat",
-		"no": "Connect on Snapchat",
-		"sv": "Connect on Snapchat"
-	},
-	"full-author-bio-block.social-soundcloud": {
-		"de": "Listen on SoundCloud",
-		"en": "Listen on SoundCloud",
-		"es": "Listen on SoundCloud",
-		"fr": "Listen on SoundCloud",
-		"ja": "Listen on SoundCloud",
-		"ko": "Listen on SoundCloud",
-		"no": "Listen on SoundCloud",
-		"sv": "Listen on SoundCloud"
-	},
-	"full-author-bio-block.social-tumblr": {
-		"de": "Connect on Tumblr",
-		"en": "Connect on Tumblr",
-		"es": "Connect on Tumblr",
-		"fr": "Connect on Tumblr",
-		"ja": "Connect on Tumblr",
-		"ko": "Connect on Tumblr",
-		"no": "Connect on Tumblr",
-		"sv": "Connect on Tumblr"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Email"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	},
 	"full-author-bio-block.social-twitter": {
-		"de": "Connect on Twitter",
-		"en": "Connect on Twitter",
-		"es": "Connect on Twitter",
-		"fr": "Connect on Twitter",
-		"ja": "Connect on Twitter",
-		"ko": "Connect on Twitter",
-		"no": "Connect on Twitter",
-		"sv": "Connect on Twitter"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on Twitter"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	},
-	"full-author-bio-block.social-whatsapp": {
-		"de": "Connect on Whatsapp",
-		"en": "Connect on Whatsapp",
-		"es": "Connect on Whatsapp",
-		"fr": "Connect on Whatsapp",
-		"ja": "Connect on Whatsapp",
-		"ko": "Connect on Whatsapp",
-		"no": "Connect on Whatsapp",
-		"sv": "Connect on Whatsapp"
+	"full-author-bio-block.social-facebook": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on Facebook"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-instagram": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Follow on Instagram"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-rss": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "RSS Feed"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-linkedin": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on LinkedIn"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-reddit": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on Reddit"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	},
 	"full-author-bio-block.social-youtube": {
-		"de": "Connect on Youtube",
-		"en": "Connect on Youtube",
-		"es": "Connect on Youtube",
-		"fr": "Connect on Youtube",
-		"ja": "Connect on Youtube",
-		"ko": "Connect on Youtube",
-		"no": "Connect on Youtube",
-		"sv": "Connect on Youtube"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on Youtube"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-medium": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on Medium"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-tumblr": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on Tumblr"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-pinterest": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on Pinterest"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-snapchat": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on Snapchat"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-whatsapp": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Connect on Whatsapp"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"full-author-bio-block.social-soundcloud": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Listen on SoundCloud"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

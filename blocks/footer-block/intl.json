@@ -1,32 +1,80 @@
 {
 	"footer-block.facebook-link": {
-		"de": "Facebook page",
-		"en": "Facebook page",
-		"es": "Facebook page",
-		"fr": "Facebook page",
-		"ja": "Facebook page",
-		"ko": "Facebook page",
-		"no": "Facebook page",
-		"sv": "Facebook page"
-	},
-	"footer-block.rss-link": {
-		"de": "RSS feed",
-		"en": "RSS feed",
-		"es": "RSS feed",
-		"fr": "RSS feed",
-		"ja": "RSS feed",
-		"ko": "RSS feed",
-		"no": "RSS feed",
-		"sv": "RSS feed"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Facebook page"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	},
 	"footer-block.twitter-link": {
-		"de": "Twitter feed",
-		"en": "Twitter feed",
-		"es": "Twitter feed",
-		"fr": "Twitter feed",
-		"ja": "Twitter feed",
-		"ko": "Twitter feed",
-		"no": "Twitter feed",
-		"sv": "Twitter feed"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Twitter feed"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"footer-block.rss-link": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "RSS feed"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

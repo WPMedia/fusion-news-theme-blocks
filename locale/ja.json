@@ -1,106 +1,254 @@
 {
-	"ads-block": {
-		"ads-block.ad-label": "ADVERTISEMENT"
-	},
-	"alert-bar-block": {
-		"alert-bar-block.close-button": "Dismiss breaking news alert",
-		"alert-bar-block.element-aria-label": "Breaking News Alert"
-	},
-	"article-body-block": {
-		"article-body-block.clarification": "説明",
-		"article-body-block.correction": "修正",
-		"article-body-block.interstitial-link-aria-label": "Open related story"
-	},
-	"author-bio-block": {
-		"author-bio-block.social-email": "Send an email to %{authorName}",
-		"author-bio-block.social-facebook": "Connect on Facebook",
-		"author-bio-block.social-instagram": "Follow on Instagram",
-		"author-bio-block.social-linkedin": "Connect on LinkedIn",
-		"author-bio-block.social-medium": "Connect on Medium",
-		"author-bio-block.social-pinterest": "Connect on Pinterest",
-		"author-bio-block.social-reddit": "Connect on Reddit",
-		"author-bio-block.social-rss": "Subscribe to %{authorName} RSS feed",
-		"author-bio-block.social-snapchat": "Connect on Snapchat",
-		"author-bio-block.social-soundcloud": "Listen to %{authorName} on SoundCloud",
-		"author-bio-block.social-tumblr": "Connect on Tumblr",
-		"author-bio-block.social-twitter": "Connect on Twitter",
-		"author-bio-block.social-whatsapp": "Connect on Whatsapp",
-		"author-bio-block.social-youtube": "Connect on Youtube"
-	},
-	"default-output-block": {
-		"default-output-block.skip-main": "Skip To Content"
-	},
-	"footer-block": {
-		"footer-block.facebook-link": "Facebook page",
-		"footer-block.rss-link": "RSS feed",
-		"footer-block.twitter-link": "Twitter feed"
-	},
-	"full-author-bio-block": {
-		"full-author-bio-block.connect-text": "接続",
-		"full-author-bio-block.social-email": "Email",
-		"full-author-bio-block.social-facebook": "Connect on Facebook",
-		"full-author-bio-block.social-instagram": "Follow on Instagram",
-		"full-author-bio-block.social-linkedin": "Connect on LinkedIn",
-		"full-author-bio-block.social-medium": "Connect on Medium",
-		"full-author-bio-block.social-pinterest": "Connect on Pinterest",
-		"full-author-bio-block.social-reddit": "Connect on Reddit",
-		"full-author-bio-block.social-rss": "RSS Feed",
-		"full-author-bio-block.social-snapchat": "Connect on Snapchat",
-		"full-author-bio-block.social-soundcloud": "Listen on SoundCloud",
-		"full-author-bio-block.social-tumblr": "Connect on Tumblr",
-		"full-author-bio-block.social-twitter": "Connect on Twitter",
-		"full-author-bio-block.social-whatsapp": "Connect on Whatsapp",
-		"full-author-bio-block.social-youtube": "Connect on Youtube"
-	},
-	"global-phrases-block": {
-		"global.gallery-autoplay-button": "自動再生",
-		"global.gallery-autoplay-label-start": "Start automatic slide show",
-		"global.gallery-autoplay-label-stop": "Stop automatic slide show",
-		"global.gallery-expand-button": "展開",
-		"global.gallery-page-count-text": "%{current} \/ %{total}",
-		"global.gallery-pause-autoplay-button": "自動再生の一時停止",
-		"global.opens-in-new-window": "(Opens in new window)",
-		"global.social-email": "Email",
-		"global.social-facebook": "Facebook",
-		"global.social-linkedin": "LinkedIn",
-		"global.social-pinterest": "Pinterest",
-		"global.social-twitter": "Twitter"
-	},
-	"header-nav-block": {
-		"header-nav-block.search-text": "Search",
-		"header-nav-block.sections-button": "Sections",
-		"header-nav-block.sign-in-button": "Sign In"
-	},
-	"header-nav-chain-block": {
-		"header-nav-chain-block.links-element-aria-label": "Top Links",
-		"header-nav-chain-block.querly-search-aria-label": "Search",
-		"header-nav-chain-block.search-text": "検索",
-		"header-nav-chain-block.sections-button": "セクション",
-		"header-nav-chain-block.sections-button-aria-label": "Show %{item} sub sections",
-		"header-nav-chain-block.sections-element-aria-label": "Sections Menu"
-	},
-	"links-bar-block": {
-		"links-bar-block.element-aria-label": "More Links"
-	},
-	"results-list-block": {
-		"results-list-block.see-more-button": "詳細",
-		"results-list-block.see-more-button-aria-label": "See More stories about this topic"
-	},
-	"search-results-list-block": {
-		"search-results-block.search-button": "検索",
-		"search-results-block.search-result-number": "%{searchTerm}\" の結果 %{smart_count} \" 件 |||| \"%{searchTerm}\" の結果 %{smart_count} 件",
-		"search-results-block.see-more-button": "詳細",
-		"search-results-block.see-more-button-aria-label": "See More stories about this topic",
-		"search-results-blocks.search-input-placeholder": "Enter your search terms"
-	},
-	"share-bar-block": {
-		"share-bar-block.share-button-aria-label": "Share current article via %{socialType}"
-	},
-	"shared-styles": {
-		"byline.and-text": "및",
-		"byline.by-text": "担当者：",
-		"overline.sponsored-content": "Sponsored Content",
-		"promo-label.gallery-text": "ギャラリー",
-		"promo-label.video-text": "ビデオ"
-	}
+    "shared-styles": {
+        "promo-label.gallery-text": {
+            "translation": "ギャラリー"
+        },
+        "promo-label.video-text": {
+            "translation": "ビデオ"
+        },
+        "byline.by-text": {
+            "translation": "担当者："
+        },
+        "byline.and-text": {
+            "translation": "및"
+        },
+        "overline.sponsored-content": {
+            "translation": "スポンサー付きコンテンツ"
+        }
+    },
+    "article-body-block": {
+        "article-body-block.correction": {
+            "translation": "修正"
+        },
+        "article-body-block.clarification": {
+            "translation": "説明"
+        },
+        "article-body-block.interstitial-link-aria-label": {
+            "translation": ""
+        }
+    },
+    "full-author-bio-block": {
+        "full-author-bio-block.connect-text": {
+            "translation": "接続"
+        },
+        "full-author-bio-block.social-email": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-twitter": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-facebook": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-instagram": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-rss": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-linkedin": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-reddit": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-youtube": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-medium": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-tumblr": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-pinterest": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-snapchat": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-whatsapp": {
+            "translation": ""
+        },
+        "full-author-bio-block.social-soundcloud": {
+            "translation": ""
+        }
+    },
+    "global-phrases-block": {
+        "global.gallery-expand-button": {
+            "translation": "展開"
+        },
+        "global.gallery-page-count-text": {
+            "translation": "%{current} \/ %{total}"
+        },
+        "global.gallery-autoplay-button": {
+            "translation": "自動再生"
+        },
+        "global.gallery-pause-autoplay-button": {
+            "translation": "自動再生の一時停止"
+        },
+        "global.gallery-autoplay-label-start": {
+            "translation": ""
+        },
+        "global.gallery-autoplay-label-stop": {
+            "translation": ""
+        },
+        "global.social-twitter": {
+            "translation": ""
+        },
+        "global.social-facebook": {
+            "translation": ""
+        },
+        "global.social-linkedin": {
+            "translation": ""
+        },
+        "global.social-pinterest": {
+            "translation": ""
+        },
+        "global.social-email": {
+            "translation": ""
+        },
+        "global.opens-in-new-window": {
+            "translation": ""
+        }
+    },
+    "header-nav-block": {
+        "header-nav-block.sections-button": {
+            "translation": "Sections"
+        },
+        "header-nav-block.sign-in-button": {
+            "translation": "Sign In"
+        },
+        "header-nav-block.search-text": {
+            "translation": "Search"
+        }
+    },
+    "header-nav-chain-block": {
+        "header-nav-chain-block.sections-button": {
+            "translation": "セクション"
+        },
+        "header-nav-chain-block.search-text": {
+            "translation": "検索"
+        },
+        "header-nav-chain-block.sections-button-aria-label": {
+            "translation": ""
+        },
+        "header-nav-chain-block.sections-element-aria-label": {
+            "translation": ""
+        },
+        "header-nav-chain-block.links-element-aria-label": {
+            "translation": ""
+        },
+        "header-nav-chain-block.querly-search-aria-label": {
+            "translation": ""
+        }
+    },
+    "results-list-block": {
+        "results-list-block.see-more-button": {
+            "translation": "詳細"
+        },
+        "results-list-block.see-more-button-aria-label": {
+            "translation": ""
+        }
+    },
+    "search-results-list-block": {
+        "search-results-block.search-button": {
+            "translation": "検索"
+        },
+        "search-results-block.search-result-number": {
+            "translation": "%{searchTerm}\" の結果 %{smart_count} \" 件 |||| \"%{searchTerm}\" の結果 %{smart_count} 件"
+        },
+        "search-results-block.see-more-button": {
+            "translation": "詳細"
+        },
+        "search-results-block.see-more-button-aria-label": {
+            "translation": ""
+        },
+        "search-results-blocks.search-input-placeholder": {
+            "translation": ""
+        }
+    },
+    "ads-block": {
+        "ads-block.ad-label": {
+            "translation": ""
+        }
+    },
+    "alert-bar-block": {
+        "alert-bar-block.element-aria-label": {
+            "translation": ""
+        },
+        "alert-bar-block.close-button": {
+            "translation": ""
+        }
+    },
+    "footer-block": {
+        "footer-block.facebook-link": {
+            "translation": ""
+        },
+        "footer-block.twitter-link": {
+            "translation": ""
+        },
+        "footer-block.rss-link": {
+            "translation": ""
+        }
+    },
+    "links-bar-block": {
+        "links-bar-block.element-aria-label": {
+            "translation": ""
+        }
+    },
+    "share-bar-block": {
+        "share-bar-block.share-button-aria-label": {
+            "translation": ""
+        }
+    },
+    "author-bio-block": {
+        "author-bio-block.social-email": {
+            "translation": ""
+        },
+        "author-bio-block.social-rss": {
+            "translation": ""
+        },
+        "author-bio-block.social-soundcloud": {
+            "translation": ""
+        },
+        "author-bio-block.social-twitter": {
+            "translation": ""
+        },
+        "author-bio-block.social-facebook": {
+            "translation": ""
+        },
+        "author-bio-block.social-instagram": {
+            "translation": ""
+        },
+        "author-bio-block.social-linkedin": {
+            "translation": ""
+        },
+        "author-bio-block.social-reddit": {
+            "translation": ""
+        },
+        "author-bio-block.social-youtube": {
+            "translation": ""
+        },
+        "author-bio-block.social-medium": {
+            "translation": ""
+        },
+        "author-bio-block.social-tumblr": {
+            "translation": ""
+        },
+        "author-bio-block.social-pinterest": {
+            "translation": ""
+        },
+        "author-bio-block.social-snapchat": {
+            "translation": ""
+        },
+        "author-bio-block.social-whatsapp": {
+            "translation": ""
+        }
+    },
+    "default-output-block": {
+        "default-output-block.skip-main": {
+            "translation": ""
+        }
+    }
 }

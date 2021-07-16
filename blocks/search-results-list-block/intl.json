@@ -1,52 +1,132 @@
 {
 	"search-results-block.search-button": {
-		"de": "Suche",
-		"en": "Search",
-		"es": "Buscar",
-		"fr": "Rechercher",
-		"ja": "検索",
-		"ko": "검색",
-		"no": "Søk",
-		"sv": "Sök"
+		"de": {
+			"translation": "Suche"
+		},
+		"en": {
+			"translation": "Search"
+		},
+		"es": {
+			"translation": "Buscar"
+		},
+		"fr": {
+			"translation": "Rechercher"
+		},
+		"ja": {
+			"translation": "検索"
+		},
+		"ko": {
+			"translation": "검색"
+		},
+		"no": {
+			"translation": "Søk"
+		},
+		"sv": {
+			"translation": "Sök"
+		}
 	},
 	"search-results-block.search-result-number": {
-		"de": "%{smart_count} Ergebnis für \"%{searchTerm}\" |||| %{smart_count} Ergebnisse für \"%{searchTerm}\"",
-		"en": "%{smart_count} result for \"%{searchTerm}\" |||| %{smart_count} results for \"%{searchTerm}\"",
-		"es": "%{smart_count} resultado para \"%{searchTerm}\" |||| %{smart_count} resultados para \"%{searchTerm}\"",
-		"fr": "%{smart_count} résultat pour \"%{searchTerm}\" |||| %{smart_count} résultats pour \"%{searchTerm}\"",
-		"ja": "%{searchTerm}\" の結果 %{smart_count} \" 件 |||| \"%{searchTerm}\" の結果 %{smart_count} 件",
-		"ko": "\"%{searchTerm}\"에 대한 검색 결과 %{smart_count}개 |||| \"%{searchTerm}\"에 대한 검색 결과 %{smart_count}개",
-		"no": "%{smart_count} treff for \"%{searchTerm}\" |||| %{smart_count} treff for \"%{searchTerm}\"",
-		"sv": "%{smart_count} resultat för ”%{searchTerm}”"
+		"de": {
+			"translation": "%{smart_count} Ergebnis für \"%{searchTerm}\" |||| %{smart_count} Ergebnisse für \"%{searchTerm}\""
+		},
+		"en": {
+			"translation": "%{smart_count} result for \"%{searchTerm}\" |||| %{smart_count} results for \"%{searchTerm}\""
+		},
+		"es": {
+			"translation": "%{smart_count} resultado para \"%{searchTerm}\" |||| %{smart_count} resultados para \"%{searchTerm}\""
+		},
+		"fr": {
+			"translation": "%{smart_count} résultat pour \"%{searchTerm}\" |||| %{smart_count} résultats pour \"%{searchTerm}\""
+		},
+		"ja": {
+			"translation": "%{searchTerm}\" の結果 %{smart_count} \" 件 |||| \"%{searchTerm}\" の結果 %{smart_count} 件"
+		},
+		"ko": {
+			"translation": "\"%{searchTerm}\"에 대한 검색 결과 %{smart_count}개 |||| \"%{searchTerm}\"에 대한 검색 결과 %{smart_count}개"
+		},
+		"no": {
+			"translation": "%{smart_count} treff for \"%{searchTerm}\" |||| %{smart_count} treff for \"%{searchTerm}\""
+		},
+		"sv": {
+			"translation": "%{smart_count} resultat för ”%{searchTerm}”"
+		}
 	},
 	"search-results-block.see-more-button": {
-		"de": "Mehr anzeigen",
-		"en": "See More",
-		"es": "Ver más",
-		"fr": "En savoir plus",
-		"ja": "詳細",
-		"ko": "자세히 보기",
-		"no": "Se mer",
-		"sv": "Fler artiklar"
+		"de": {
+			"translation": "Mehr anzeigen"
+		},
+		"en": {
+			"translation": "See More"
+		},
+		"es": {
+			"translation": "Ver más"
+		},
+		"fr": {
+			"translation": "En savoir plus"
+		},
+		"ja": {
+			"translation": "詳細"
+		},
+		"ko": {
+			"translation": "자세히 보기"
+		},
+		"no": {
+			"translation": "Se mer"
+		},
+		"sv": {
+			"translation": "Fler artiklar"
+		}
 	},
 	"search-results-block.see-more-button-aria-label": {
-		"de": "See More stories about this topic",
-		"en": "See More stories about this topic",
-		"es": "See More stories about this topic",
-		"fr": "See More stories about this topic",
-		"ja": "See More stories about this topic",
-		"ko": "See More stories about this topic",
-		"no": "See More stories about this topic",
-		"sv": "See More stories about this topic"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "See More stories about this topic"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	},
 	"search-results-blocks.search-input-placeholder": {
-		"de": "Enter your search terms",
-		"en": "Enter your search terms",
-		"es": "Enter your search terms",
-		"fr": "Enter your search terms",
-		"ja": "Enter your search terms",
-		"ko": "Enter your search terms",
-		"no": "Enter your search terms",
-		"sv": "Enter your search terms"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Enter your search terms"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }

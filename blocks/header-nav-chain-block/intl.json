@@ -1,62 +1,158 @@
 {
-	"header-nav-chain-block.links-element-aria-label": {
-		"de": "Top Links",
-		"en": "Top Links",
-		"es": "Top Links",
-		"fr": "Top Links",
-		"ja": "Top Links",
-		"ko": "Top Links",
-		"no": "Top Links",
-		"sv": "Top Links"
-	},
-	"header-nav-chain-block.querly-search-aria-label": {
-		"de": "Search",
-		"en": "Search",
-		"es": "Search",
-		"fr": "Search",
-		"ja": "Search",
-		"ko": "Search",
-		"no": "Search",
-		"sv": "Search"
+	"header-nav-chain-block.sections-button": {
+		"de": {
+			"translation": "Ressorts"
+		},
+		"en": {
+			"translation": "Sections"
+		},
+		"es": {
+			"translation": "Secciones"
+		},
+		"fr": {
+			"translation": "Sections"
+		},
+		"ja": {
+			"translation": "セクション"
+		},
+		"ko": {
+			"translation": "섹션"
+		},
+		"no": {
+			"translation": "Meny"
+		},
+		"sv": {
+			"translation": "Meny"
+		}
 	},
 	"header-nav-chain-block.search-text": {
-		"de": "Suche",
-		"en": "Search",
-		"es": "Buscar",
-		"fr": "Rechercher",
-		"ja": "検索",
-		"ko": "검색",
-		"no": "Søk",
-		"sv": "Sök"
-	},
-	"header-nav-chain-block.sections-button": {
-		"de": "Ressorts",
-		"en": "Sections",
-		"es": "Secciones",
-		"fr": "Sections",
-		"ja": "セクション",
-		"ko": "섹션",
-		"no": "Meny",
-		"sv": "Meny"
+		"de": {
+			"translation": "Suche"
+		},
+		"en": {
+			"translation": "Search"
+		},
+		"es": {
+			"translation": "Buscar"
+		},
+		"fr": {
+			"translation": "Rechercher"
+		},
+		"ja": {
+			"translation": "検索"
+		},
+		"ko": {
+			"translation": "검색"
+		},
+		"no": {
+			"translation": "Søk"
+		},
+		"sv": {
+			"translation": "Sök"
+		}
 	},
 	"header-nav-chain-block.sections-button-aria-label": {
-		"de": "Show %{item} sub sections",
-		"en": "Show %{item} sub sections",
-		"es": "Show %{item} sub sections",
-		"fr": "Show %{item} sub sections",
-		"ja": "Show %{item} sub sections",
-		"ko": "Show %{item} sub sections",
-		"no": "Show %{item} sub sections",
-		"sv": "Show %{item} sub sections"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Show %{item} sub sections"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	},
 	"header-nav-chain-block.sections-element-aria-label": {
-		"de": "Sections Menu",
-		"en": "Sections Menu",
-		"es": "Sections Menu",
-		"fr": "Sections Menu",
-		"ja": "Sections Menu",
-		"ko": "Sections Menu",
-		"no": "Sections Menu",
-		"sv": "Sections Menu"
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Sections Menu"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"header-nav-chain-block.links-element-aria-label": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Top Links"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
+	},
+	"header-nav-chain-block.querly-search-aria-label": {
+		"de": {
+			"translation": ""
+		},
+		"en": {
+			"translation": "Search"
+		},
+		"es": {
+			"translation": ""
+		},
+		"fr": {
+			"translation": ""
+		},
+		"ja": {
+			"translation": ""
+		},
+		"ko": {
+			"translation": ""
+		},
+		"no": {
+			"translation": ""
+		},
+		"sv": {
+			"translation": ""
+		}
 	}
 }
